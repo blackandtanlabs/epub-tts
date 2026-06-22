@@ -69,8 +69,8 @@ aloud well. My part was to make it whole and portable, to finish a few things
 that were close to done, and to write it all down. I have tried to do that with
 a light touch, in keeping with how he built it.
 
-— *Maintained by [Black & Tan Labs](https://github.com/blackandtanlabs).
-Created by [name].*
+— *Created by Patrick Clark. Maintained by his family at
+[Black & Tan Labs](https://github.com/blackandtanlabs).*
 
 ## Documentation
 

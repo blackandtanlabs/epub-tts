@@ -78,6 +78,7 @@ a light touch, in keeping with how he built it.
 - [ARCHITECTURE.md](ARCHITECTURE.md) — how the pieces fit together
 - [SETUP.md](SETUP.md) — installing and pointing it at your books
 - [USAGE.md](USAGE.md) — processing a book and listening
+- [docs/TEXT-PROCESSING.md](docs/TEXT-PROCESSING.md) — pauses, pronunciation, and loudness, with best practices
 
 ## License
 

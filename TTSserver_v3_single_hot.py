@@ -516,6 +516,11 @@ def speak():
                 seg_meta.append({"index": seg.index, "kind":"silence", "ms": seg.ms})
                 continue
 
+            # Nothing speakable (whitespace or punctuation only) produces no
+            # audio from Piper; skip it rather than fail the whole paragraph.
+            if not re.search(r"\w", seg.text or "", flags=re.UNICODE):
+                continue
+
             params, perr = resolve_params_for_segment(conn, seg)
             if perr:
                 if perr == "unknown_voice":

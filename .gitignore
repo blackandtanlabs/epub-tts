@@ -29,3 +29,9 @@ Thumbs.db
 
 # Per-book working cache (regenerable; may contain copyrighted book text)
 transient.db
+
+# Per-book working files generated during processing
+/pages/[0-9]*/
+
+# Local ebook library
+/library/

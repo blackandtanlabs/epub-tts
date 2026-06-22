@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+h1
+    {
+    font-size: 24px;
+    font-family: sans-serif;
+    }
+h2
+    {
+    font-size: 20px;
+    font-family: serif;
+    }
+h3
+    {
+    font-size: 16px;
+    font-family: serif;
+    }
+li
+    {
+    margin-bottom: 10px;
+    }
+a:link {
+    color: blue;}
+a:visited {
+    color: blue;}
+#nav
+    {
+    background-color:#dddddd;
+    font-size: 11px;
+    width:24%;
+    float:left;
+    text-align:center;
+    padding:2px;
+    }
+body
+    {
+    padding:0
+    }
+a:link {
+    color: blue;}
+a:visited {
+    color: blue;}
+
+html, body {
+    padding:0; margin:0;
+    width:100%;
+    height:100%;
+    background-color:#ffbbbb;
+    overflow:hidden;}
+body {
+    font-family:serif;
+    font-size:18px;
+    }
+.PFC-container {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100vw;
+    height: 95vh;
+    }
+.PFC-container .PFCpage {
+     height: 100%;
+     width: 98vw;
+     display: block;
+    padding-left:1vh;
+    padding-right:1vh;
+    }
+</style>
+</head>
+<body>
+<div style="font-family:sans-serif; font-size: 24px; text-align: center"><strong>Prolific Authors</strong></div>
+<div class="PFC-container"><div class="PFCpage">
+<div style="background-image: radial-gradient(yellow,green);">
+{{1}}
+{{2}}
+</div>
+</body>
+</html>

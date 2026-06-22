@@ -1,0 +1,343 @@
+:root {
+  --color: #bbbb55;
+}
+.dynamic-color {
+  background-color: var(--color);
+}
+
+h1
+{
+	font-size: 24px;
+	font-family: sans-serif;
+	margin-top: 5px;
+	margin-bottom: 2px;
+}
+h2
+{
+	font-size: 20px;
+	font-family: serif;
+	margin-top: 5px;
+	margin-bottom: 2px;
+}
+h3
+{
+	font-size: 16px;
+	font-family: serif;
+	margin-top: 5px;
+	margin-bottom: 2px;
+}
+
+hr {
+/*	border: none;*/
+	height: 10px;
+	background-color: green;  /* Modern Browsers */
+}
+li
+{
+	margin-bottom: 10px;
+}
+form {
+/*	width: 100%;*/
+	margin: 0 auto;
+}
+
+input {
+	/*display: inline-block;*/
+	height:6vh;
+	width:32%;
+	font-size: 2.5vh;
+	border: solid 1px #000000;
+}
+.wideInput {
+/*	display: inline-block;*/
+	height:6vh;
+	width:48%;
+	font-size: 2.5vh;
+	border: solid 1px #000000;
+}
+
+.spinner {
+    border: 10px solid #f3f3f3; /* Light grey */
+    border-top: 10px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite; /* Animation */
+    margin: 0 auto; /* Center it */
+}
+
+/* Basic CSS to make the link look like a button */
+.button-link
+{
+	display: inline-block;
+	/* Essential for padding/margin */
+	padding: 15px 15px;
+	background-image:radial-gradient(yellow,#f06d06);
+	/* Button color */
+	color: white;
+	/* Text color */
+	text-align: center;
+	text-decoration: none;
+	/* Removes underline */
+	border: solid 2px #000000;
+	border-radius: 40px;
+	height: 5vh;
+	cursor: pointer;
+	font-family: Arial, sans-serif;
+	font-size: 3.5vh;
+}
+
+label {
+	/* Positions the label text beside the input */
+	text-align: right;
+	margin:0 0 0 5px;
+	font-size: 2.5vh;
+}
+
+a:link {
+	color: blue;
+}
+a:visited {
+	color: blue;
+}
+a:link {
+	color: blue;
+}
+a:visited {
+	color: blue;
+}
+html, body {
+	padding:0;
+/*	margin:0;
+	width:100%;
+	height:100%;*/
+	font-size:100%;
+	background-image: radial-gradient(yellow,green);
+	font-family:serif;
+/*	scrollbar-color:red orange;
+	scrollbar-width:auto;*/
+}
+.box
+{
+	text-align:center;
+	border: solid 2px #000000;
+	outline: 0;
+	background-image: radial-gradient(yellow,#f06d06);
+	width:100%;
+	border-radius: 40px;
+	font-size:3vh;
+	color:#000000;
+	float: left;
+}
+.box2
+{
+	text-align:center;
+	border: solid 2px #000000;
+	outline: 0;
+	background-image: radial-gradient(yellow,#f06d06);
+	height: 7vh;
+	width:98%;
+	border-radius: 40px;
+	margin:0.1vw;
+	font-size:2.5vh;
+	color:#000000;
+}
+.tinyButton
+{
+	border: solid 2px #000000;
+	outline: 0;
+	background-image:radial-gradient(yellow,#f06d06);
+	height: 4vh;
+	width:18vw;
+	border-radius: 18px;
+	padding:1px;
+	font-size:2vh;
+	color:#000000;
+	margin-top:1vh;
+	margin-bottom:1px;
+}
+.smallButton
+{
+	border: solid 2px #000000;
+	outline: 0;
+	background-image:radial-gradient(yellow,#f06d06);
+	height: 8vh;
+	width:30vw;
+	border-radius: 40px;
+	padding:1px;
+	font-size:3vh;
+	color:#000000;
+	margin-top:1vh;
+	margin-bottom:1px;
+}
+.halfButton
+{
+	border: solid 2px #000000;
+	outline: 0;
+	background-image:radial-gradient(yellow,#f06d06);
+	height: 5vh;
+	width:40%;
+	border-radius: 40px;
+	padding:1px;
+	font-size:2vh;
+	color:#000000;
+	margin-top:1vh;
+	margin-bottom:1px;
+}
+.displayButton
+{
+	border: solid 2px #000000;
+	background-image: radial-gradient(gold,#f06d06);
+	height: 6vh;
+	width:98%;
+	border-radius: 40px;
+	margin:0.1vw;
+	font-size:2.5vh;
+	color:#000000;
+}
+.button
+{
+	border: solid 2px #000000;
+	border-radius: 40px;
+	height: 5vh;
+	outline: 0;
+	background-image:radial-gradient(yellow,#f06d06);
+	width:40%;
+	margin-right:2vw;
+	padding:2px;
+	font-size:2vh;
+	color:#000000;
+	margin-top:2vh;
+	margin-bottom:2vh;
+}
+.smallButtonRight
+{
+	border: solid 2px #000000;
+	outline: 0;
+	background-image:radial-gradient(yellow,#f06d06);
+	height: 5vh;
+	/*width:20vw;*/
+	border-radius: 40px;
+	padding:2px;
+	font-size:2vh;
+	color:#000000;
+	float: right;
+	margin-top:1vh;
+	margin-bottom:1vh;
+}
+.tallButton
+{
+	border: solid 2px #000000;
+	outline: 0;
+	background-image: radial-gradient(yellow,#f06d06);
+	height: 6vh;
+	width:49%;
+	border-radius: 40px;
+	font-size:4vh;
+	color:#000000;
+}
+.redButton
+{
+	border: solid 2px #000000;
+	outline: 0;
+	background-image: radial-gradient(red,#f06d06);
+	height: 7vh;
+	width:49%;
+	border-radius: 40px;
+	font-size:2.5vh;
+	color:#000000;
+}
+.fatButton
+{
+	border: solid 2px #000000;
+	outline: 0;
+	background-image: radial-gradient(gold,#f06d06);
+	height: 8vh;
+	width:50%;
+	border-radius: 40px;
+	margin:0.1vw;
+	font-size:3vh;
+	color:#000000;
+}
+.mediumButton
+{
+	border: solid 2px #000000;
+	outline: 0;
+	background-image: radial-gradient(yellow,#f06d06);
+	height: 6vh;
+	width:40%;
+	border-radius: 40px;
+	font-size:2.5vh;
+	color:#000000;
+	margin: 0.1vw;
+}
+.reactButton
+{
+	height: 3vh;
+	width:25%;
+	font-size:2vh;
+	background-color: green;
+	color: black;
+	margin: 0.1vw;
+	opacity: 0.0;
+}
+.nameInput
+{
+	border-radius: 3px;
+	width: 42vw;
+	height: 3vh;
+	font-size:2.5vh;
+	font-family:serif;
+	border: 2px solid green;
+	float:right;
+	margin-right: 2vh;
+	margin-left: 1vh;
+	background-image:radial-gradient(yellow,#f06d06);
+}
+.flex-container
+{
+	display: flex;
+}
+
+.flex-container > div
+{
+	background-color: white;
+	margin: 10px;
+	padding: 20px;
+	font-size: 30px;
+}
+
+.btn-group button {
+  background-color: blue; /* Green background */
+  border: 1px solid blue; /* Green border */
+  color: white; /* White text */
+  padding: 10px 20px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+div.bookDisplay{
+	hyphens:auto !important;
+	width:92% !important;
+	overflow:auto !important;
+	text-align:left !important;
+/*	display:none;*/
+	font-size:1.4em !important;
+	padding:3% !important;
+	background-color: var(--color) !important;
+}

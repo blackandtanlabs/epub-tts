@@ -1,0 +1,136 @@
+﻿TTS WARM SERVER — BASELINE CONTRACT (PROPOSED)
+
+0) GENERAL INFORMATION
+SQLite Database: <CWD>/labelCheck.db
+SQLite Table within Database: "voice_params"
+	voice_number		// index
+	speed
+	pitch
+	volume
+	noise
+	noise_w
+	silence
+SQLite Table within Database: "recipes"
+	name			// index
+	speed
+	pitch
+	volume
+	noise
+	noise_w
+	silence
+Piper command:
+"piper.exe
+	-m <model>
+	-c $<json>
+	-i $<textFile>			// note use of file to avoid command being too long with much text
+	-f <PiperOutWav>
+	-s <voiceNumber>
+	--length-scale <length derived from inverse of DB speed>
+	--noise-scale <noise>
+	--noise-w <noiseW>
+	--sentence-silence <silence>
+	--volume <volume>		// note availability claimed by piper.exe -h
+	--no-normalize			// note this parameter, because we do it better.
+	--debug"
+
+SoX commands:
+Handling ⦃c:name⦄ Note that "remix" automatically converts mono to stereo
+
+"sox.exe --multi-threaded <PiperOutWav> <SOXoutWav> remix 1 0 earwax"	// Stereo, Left
+"sox.exe --multi-threaded <PiperOutWav> <SOXoutWav> remix 1 1"		// Stereo, "in-head"
+"sox.exe --multi-threaded <PiperOutWav> <SOXoutWav> remix 1 1 earwax"	// Stereo. Center
+"sox.exe --multi-threaded <PiperOutWav> <SOXoutWav> remix 0 1 earwax"	// Stereo, Right
+
+Handling pitch
+// <pitchChange> in "cents" derived effective DB Pitch ranging around 1.0
+// so effective pitch of 1.1 is 10 cents. 0.9 is -10 cents
+"sox.exe --multi-threaded <PiperOutWav> <SOXoutWav> pitch <pitchChange> 30"	
+
+
+1) Endpoint
+POST /speak
+Content-Type: application/json; charset=utf-8
+
+2) Request Body (JSON)
+{
+  "sid": "CH01_S00017",                  		// required: stable ID echoed back
+  "text": "⦃v:1⦄Hello ⦃r:soft⦄world⦃w:250⦄!"		// required: UTF-8, includes tokens v/r/w/c only
+}
+
+3) Token Semantics (in text)
+- ⦃v:n⦄			Voice switch. Ends current segment and starts a new one; also **clears** recipe stack.
+- ⦃r:name⦄		Push recipe 'name' (stacked). Ends current segment; new one starts if there is speech.
+- ⦃r⦄			Pop (unstack) one recipe. Ends current segment; new one starts if there is speech.
+- ⦃c:name⦄		Channel: left, right, center, in-head. handled by SoX
+- ⦃w:ms⦄			Insert an inline silence of ms milliseconds at that exact point (non-breaking). 
+				(values: integer ≥0 and ≤ WAIT_MAX_MS=10000)
+
+Notes:
+• Only ⦃v⦄, ⦃r⦄/⦃r:name⦄, ⦃c:name⦄ and ⦃w:ms⦄ are recognized. No aside markers; client handles any aside logic.
+• Segments are formed by v/r/c boundaries; order is preserved; empty segments are not allowed out but may be presented to server. 
+
+4) Effective Parameter Resolution (per speech segment)
+Let the current voice DB row provide baselines (s_base, speed_base, pitch_base, n_base, w_base, x_base, vol_base) from their existing field names.
+Let the active recipe stack (top-most last) provide optional multipliers/overrides.
+
+Compute:
+- speed_eff = round( speed_base × Π(recipe.mul_speed or 1.0), 2 )	// translated to "length" for Piper
+- pitch_eff = round( pitch_base × Π(recipe.mul_pitch or 1.0), 2 )		// handled by SoX
+- n_eff = round( n_base × Π(recipe.mul_n or 1.0), 2 )
+- w_eff = round( w_base × Π(recipe.mul_w or 1.0), 2 )
+- x_eff = (top-most recipe.abs_x if any, else x_base)
+- volume_eff = vol_base × Π(recipe.vol_mul or 1.0), 2)			// handled by Piper
+
+All “mul_*” are multiplicative
+Volume handled by Piper, not Sox
+Stereo, channel, and pitch handled by Sox
+
+
+5) Response (JSON)
+{
+  "ok": true,
+  "sid": "CH01_S00017",
+  "job_id": "20251009_113255_5f6c8a4f",     // unique per job
+  "wav_path": "<CWD>\\audio\\ch01_s00017.wav",
+  "elapsed_sec": 0.942,
+  "voice_number": 1,
+  "recipes_applied": ["soft","..."],        // in stack order (base->top); may be empty
+  "final_format": { "sample_rate_hz": 44100, "channels": 2, "bit_depth": 16 },
+  "segments": [
+    // ordered; includes speech and silence entries; each speech entry reports its clean text (no tokens)
+    { "index": 0, "kind": "speech",  "text": "Hello ", "params": { "s":1.0,"n":1.0,"w":1.0,"x":0.2,"volume":1.0 } },
+    { "index": 1, "kind": "speech",  "text": "world",  "params": { "s":1.0,"n":1.0,"w":1.0,"x":0.2,"volume":1.0 } },
+    { "index": 2, "kind": "silence", "ms": 250 }
+  ],
+  "ts": "2025-10-09 11:32:55"
+}
+
+6) Errors (JSON)
+- 400: { "ok": false, "error": "unknown_voice", "detail": "voice_number 5" }
+- 400: { "ok": false, "error": "unknown_recipe", "detail": "soft" }
+- 400: { "ok": false, "error": "malformed_wait", "detail": "w:abc" }
+- 400: { "ok": false, "error": "unknown_channel", "detail": "text" }
+- 413: { "ok": false, "error": "too_long", "detail": "TEXT_MAX_CHARS" }
+- 500: { "ok": false, "error": "piper_unavailable" }
+- 500: { "ok": false, "error": "synthesis_failed" }
+
+7) Database (SQLite)
+See GENERAL INFORMATION
+
+Tables (exactly two) already exist
+See GENERAL INFORMATION
+
+Data not present in Tables are constant
+	Model Path: CWD/en_US-libritts_r-medium.onnx
+	sample_rate_hz: 44100				// SoX output
+	channels: 2					// SoX output
+	bit_depth: 16
+
+8) SoX Usage (volume only)
+- With SoX, server applies effective pitch if not 1.0 with "key" effect, as specified above
+- With SoX, server applies 2 channels and Left, Right, Center, and In-head with "remix" effect, as specified above
+- No dB gain anywhere; no limiter/headroom in this baseline (can be added later without changing the POST contract).
+
+9) Caps & Rounding
+- Piper/SoX numeric params rounded to 2 decimals.
+- Limits: TEXT_MAX_CHARS, SEGMENT_MAX_COUNT, WAIT_MAX_MS (exact values TBD in implementation).

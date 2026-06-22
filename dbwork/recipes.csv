@@ -1,0 +1,11 @@
+name	speed	pitch	volume	noise	noise_w	silence
+Younger	0.96	1	1	0.667	0.8	0.2
+Older	1.1	-2.5	1	0.667	0.8	0.4
+Shy	1.05	1	1	0.667	0.8	0.4
+Bold	0.95	1	1	0.667	0.8	0.15
+Warm	1	1	1	0.667	0.8	0.2
+Bright	0.99	1	1	0.667	0.8	0.2
+Nasal	1	1	1	0.667	0.8	0.2
+Raspy	1	-0.3	1	0.667	0.8	0.2
+Loud	1	1	2	0.667	0.8	0.2
+Soft	1	1	0.5	0.667	0.8	0.2

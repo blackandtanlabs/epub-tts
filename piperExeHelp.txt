@@ -1,0 +1,53 @@
+1. place piper.exe, model, and json in same directory
+2. place text to speak in text.txt in same directory
+3. 
+
+
+PHP
+
+TTS: exec("piper.exe -m $model -c $json -i $text.txt -f $PoutWav -s $speakerNumber --length-scale $length --noise-scale $noise --noise-w $noiseW --sentence-silence $silence --volume $volume --no-normalize --debug ");
+channel left: exec("sox.exe $PoutWav $SoutWav remix 1 0 earwax");	// not close to head
+channel in-head: exec("sox.exe $PoutWav $SoutWav remix 1 1");		// this is "in-head"
+channel center: exec("sox.exe $PoutWav $SoutWav remix 1 1 earwax");	// this is "in front of head"
+channel right: exec("sox.exe $PoutWav $SoutWav remix 0 1 earwax");	// not close to head
+
+sox mono_in.wav stereo_out_center.wav remix 1 1
+sox mono_in.wav stereo_out_left.wav remix 1 0
+sox mono_in.wav stereo_out_right.wav remix 0 1
+
+
+  -h, --help            show this help message and exit
+  -m, --model MODEL     Path to Onnx model file
+  -c, --config CONFIG   Path to model config file
+  -i, --input-file, --input_file INPUT_FILE
+                        Paths to input text files
+  -f, --output-file, --output_file OUTPUT_FILE
+                        Path to output WAV file (default: stdout)
+  -d, --output-dir, --output_dir OUTPUT_DIR
+                        Path to output directory (default: cwd)
+  --output-raw, --output_raw
+                        Stream raw audio to stdout
+  -s, --speaker SPEAKER
+                        Id of speaker (default: 0)
+  --length-scale, --length_scale LENGTH_SCALE
+                        Phoneme length
+		It scales the duration of every phoneme in the speech.	>1.0 (Higher): Slower, more drawn-out speech.
+							Default is 1.0	<1.0 (Lower): Faster, more hurried speech.
+  --noise-scale, --noise_scale NOISE_SCALE
+                        Generator noisec ontrols the pitch variation and vocal roughness.
+		    Higher values increase the amount of random noise added to the voice,
+			which can make it sound more expressive or, if too high, more degraded/crackly.
+		    Lower values make the voice sound more clear and uniform (sometimes robotic).
+			Default is often 0.667.
+  --noise-w-scale, --noise_w_scale, --noise-w, --noise_w NOISE_W_SCALE
+                        Phoneme width noise controls the variability and "jitter" in the rhythm
+		    and pauses between words/phonemes.		>1.0 (Higher): Introduces more extreme pauses and stutters, making the speech sound very erratic or expressive.
+		    Default is 0.333 (or similar)				<1.0 (Lower): Makes the speech cadence more uniform and machine-like.
+  --cuda                Use GPU
+  --sentence-silence, --sentence_silence SENTENCE_SILENCE
+                        Seconds of silence after each sentence
+  --volume VOLUME       Volume multiplier (default: 1.0)
+  --no-normalize        Don't normalize audio
+  --data-dir, --data_dir DATA_DIR
+                        Data directory to check for voice models (default: current directory)
+  --debug          Print DEBUG messages to console

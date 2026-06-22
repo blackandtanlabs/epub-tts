@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="favicon.ico" rel="icon" type="image/x-icon" />
+<style>
+h1
+    {
+    font-size: 24px;
+    font-family: sans-serif;
+    text-align: center;
+    padding-bottom: 10px;
+    }
+h2
+    {
+    font-size: 3vh;
+    font-family: serif;
+    text-align: center;
+    padding-bottom: 5px;
+    }
+h3
+    {
+    font-size: 16px;
+    font-family: serif;
+    text-align: center;
+    padding-bottom: 5px;
+    }
+a:link {
+    color: blue;}
+a:visited {
+    color: blue;}
+
+html, body {
+    padding:0; margin:0;
+    width:100%;
+    height:100%;
+    background-color:#99ff99;
+    overflow:hidden;}
+body {
+    font-family:serif;
+    font-size:4vh;
+    }
+.PFC-container {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100vw;
+    }
+.PFC-container .PFCpage {
+     height: 100%;
+     width: 97vw;
+     display: block;
+    padding-left:1vh;
+    padding-right:1vh;
+    }
+</style>
+<title>Computer Books</title>
+</head>
+<body>
+<div style="font-family:sans-serif; font-size: 6vh; text-align: center"><strong>Browse Books</strong></div>
+<div class="PFC-container"><div class="PFCpage">
+<div style="background-image: radial-gradient(yellow,green);">
+    <a href="pages/doc.php"><h2>Usage</h2></a>
+    <a href="pages/recent.php"><h2>Recently Obtained</h2></a>
+    <a href="pages/popularAuthors.php?s=0&e=-1"><h2>Popular Authors</h2></a>
+    <a href="pages/topAuthors.php"><h2>Prolific Authors</h2></a>
+    <a href="pages/allAuthors.php?s=0&e=-1"><h2>All Authors</h2></a>
+    <a href="pages/series.php"><h2>Series</h2></a>
+    <a href="pages/popularGenres.php"><h2>Genre</h2></a>
+    <a href="pages/titles.php?s=0&e=-1"><h2>Title</h2></a>
+    <a href="pages/lastOpened.php"><h2>Last Processed</h2></a>
+<div style="background-image: radial-gradient(white,red);">
+ <p style="font-size: 16px; text-align: center">For development use only</p>
+    <a href="pages/phpliteadmin.php"><h2>DB Manager</h2></a>
+    <a href="pages/cleanDB.php"><h2 style="padding-top: 1vh;">Clean Transient DB</h2></a>
+</div>
+</body>
+</html>

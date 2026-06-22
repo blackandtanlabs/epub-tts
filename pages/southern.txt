@@ -1,0 +1,50 @@
+Many common English words are pronounced differently by Southern U.S. speakers due to a distinct set of
+vowel shifts and a tendency to elongate or "drawl" vowels, often making single-syllable words sound like two.
+Below is a list of common words, with their typical General American (GA) pronunciation contrasted with a common Southern American English (SAE) pronunciation (approximated non-technically), while avoiding slang or substitute words.
+
+    "A":
+        GA: "Ay"
+        SAE: "Uh" or "Ah"
+    Aunt:
+        GA: "Ant" (rhymes with pant)
+        SAE: "Ahnt" (rhymes with haunt) or "Aint"
+    Buy/By:
+        GA: "Bigh" (long 'i' sound)
+        SAE: "Bah" (longer "ah" sound)
+    Can't:
+        GA: "Cant" (short 'a')
+        SAE: "Caint" (long 'a' then short 'i' sound, sometimes with a drawl, almost "cay-uhnt")
+    Car:
+        GA: "Car" (hard 'r')
+        SAE: "Caa" (softer 'r' or non-rhoticity in some older/rural dialects)
+    Fire:
+        GA: "Fiy-er" (two syllables)
+        SAE: "Faar" or "Fahr" (often one syllable, the glide is deleted)
+    Get:
+        GA: "Geht"
+        SAE: "Giht"
+    Going (as in "going to"):
+        GA: "Go-ing" or "Go-eeng"
+        SAE: "Goin'" or "Gunna" (the final 'g' is often dropped, or "going to" becomes "gonna")
+    Oil:
+        GA: "Oy-ill"
+        SAE: "Oll" (one syllable)
+    On:
+        GA: "On" (short 'o')
+        SAE: "Own" (long 'o' sound)
+    Pen (writing instrument) / Pin (fastener):
+        GA: "Pehn" / "Pihn" (distinct vowel sounds)
+        SAE: "Pihn" for both words (the vowel sounds in these words are merged, a key feature of the accent)
+    Tire:
+        GA: "Tiy-er" (two syllables)
+        SAE: "Taar" or "Tahr" (often one syllable, the glide is deleted)
+    Wash:
+        GA: "Wash"
+        SAE: "Warsh" (an 'r' sound is often inserted)
+    Windows:
+        GA: "Win-dohs"
+        SAE: "Win-ders" (an 'r' sound is often inserted)
+    You all:
+        GA: "You all" (two words)
+        SAE: "Y'all" (a single contraction used as the second-person plural
+        pronoun)

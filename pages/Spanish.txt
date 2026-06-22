@@ -1,0 +1,29 @@
+Spanish speakers often pronounce English words using Spanish phonetic rules, as English has a much larger inventory of vowel and consonant sounds (around 19 vowels and 25 consonants) compared to Spanish (five pure vowels and 16-20 consonants)
+.
+Here is a list of common English words and how a native Spanish speaker might pronounce them, reflecting common phonological transfers:
+Vowels
+Spanish speakers may confuse English's many short and long vowel sounds or the unstressed schwa sound (uh).
+English Word (Correct Pronunciation)	Spanish Speaker Pronunciation (Phonetic Adaptation)	Reason for Difference
+Ship (/ʃɪp/)	Sheep (/ʃiːp/) or Sip (/sɪp/)	Spanish has no short "i" (/ɪ/) or "sh" (/ʃ/) sound.
+Live (/lɪv/)	Leave (/liːv/)	The short "i" in English is often rendered as a long "e" sound.
+Pull (/pʊl/)	Pool (/puːl/)	Spanish lacks the short "u" sound (/ʊ/).
+Cat (/kæt/)	Cut (/kʌt/) or Cot (/kɑːt/)	English sounds like "a" in "cat" (/æ/) or "u" in "cut" (/ʌ/) don't exist in Spanish.
+But (/bʌt/)	Bat (/bæt/)	Confusion between the short "u" (/ʌ/) and "a" (/æ/) sounds.
+Consonants
+Certain consonant sounds or clusters in English do not exist in Spanish, leading to substitutions.
+English Word (Correct Pronunciation)	Spanish Speaker Pronunciation (Phonetic Adaptation)	Reason for Difference
+Very (/ˈvɛri/)	Berry (/ˈbɛri/)	In Spanish, the "b" and "v" sounds are pronounced almost identically, as a soft "b" sound.
+Think (/θɪŋk/)	Tink (/tɪŋk/) or Sink (/sɪŋk/)	The "th" (/θ/) sound does not exist in Spanish and is often replaced with "t" or "s".
+This (/ðɪs/)	Dis (/dɪs/)	The voiced "th" (/ð/) is typically replaced with a "d" sound.
+Jail (/dʒeɪl/)	Yale (/jeɪl/)	The "j" sound (/dʒ/) can be confused with the English "y" sound (/j/).
+Shampoo (/ʃæmˈpuː/)	Champoo (/tʃæmˈpuː/)	The "sh" sound (/ʃ/) doesn't exist in Spanish and is often pronounced as "ch" (/tʃ/).
+Stop (/stɒp/)	E-stop (/ɛstɒp/)	Spanish words never start with an "s" followed by a consonant (like st or sp), so an "e" sound is often added.
+Happy (/ˈhæpi/)	Appy (/ˈæpi/) or (Overly aspirated "h")	The letter "h" is usually silent in Spanish, so the sound may be omitted or over-pronounced.
+Time (/taɪm/)	Tine (/taɪn/)	Words in Spanish rarely end in an "m" sound; "n" is more common.
+Other Pronunciation Features
+
+    Word Stress: Spanish has a more regular word stress system. Spanish speakers may apply that rhythm to English words, stressing every syllable more evenly or placing stress on different syllables than a native English speaker would.
+    Intonation: Spanish is a "syllable-timed" language, meaning each syllable
+    has roughly the same duration. English is "stress-timed," with varied
+    intonation and reduced unstressed syllables. This can make a Spanish
+    speaker's English sound flatter in pitch.

@@ -1,0 +1,14 @@
+//
+//name,sex,quality,narr/spkr,base volume, definition (yyyyy = Speaker)
+//^ 	5E 	94
+'US Joey,male,5,S,5,{@+yyyyy=com.hyperionics.ampl,en_US_joey,joey}}',
+'US Salli,female,5,S,5,{@+yyyyy=com.hyperionics.ampl,en_US _salli,salli}}',
+'US Ella (child),female,5,S,5,{@+yyyyy=com.acapelagroup.android.tts,eng_US A_Ella,eng-US A-Ella}}',
+'US Karen,female,5,S,5,{@+yyyyy=com.acapelagroup.android.tts,eng_US A_Karen,eng-US A-Karen}}',
+'US Laura,female,6,S,5,{@+yyyyy=com.acapelagroup.android.tts,eng_US A_Laura,eng-US A-Laura}}',
+'US Rod,male,6,S,5,{@+yyyyy=com.acapelagroup.android.tts,eng_US A_Rod,eng-US A-Rod}}',
+'US Ryan,male,5,S,5,{@+yyyyy=com.acapelagroup.android.tts,eng_US A_Ryan,eng-US A-Ryan}}',
+'US Scott (teen),male,5,S,5,{@+yyyyy=com.acapelagroup.android.tts,eng_US A_Scott,eng-US A-Scott}}',
+'US Sharon,female,6,S,5,{@+Sharon=com.acapelagroup.android.tts,eng_US A_Sharon,eng-US A-Sharon}}',
+'US Tracy,female,5,S,5,{@+yyyyy=com.acapelagroup.android.tts,eng_US A_Tracy,eng-US A-Tracy}}',
+'US Will,male,6,S,5,{@+yyyyy=com.acapelagroup.android.tts,eng_US A_Will,eng-US A-Will}}',

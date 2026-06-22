@@ -1,0 +1,74 @@
+cmd	regx	repl
+AAA	This table should only contain substitutions that look like their problem words	
+TTS	\bE\!	E
+TTS	\bABC	A B C
+TTS	\bMGM	M G M
+TTS	\bESPN	E S P N
+TTS	\bCNN	C N N
+TTS	\bNBC	N B C
+TTS	\bCBS	C B S
+TTS	\bTMZ	T M Z
+TTS	\bCSI	C S I
+TTS	\bWTF	W T F
+TTS	\bOMG	O M G
+TTS	\bNYPD	N Y P D
+TTS	\bLVPD	L V P D
+TTS	\bLAPD	L A P D
+TTS	\bLAX	L A X
+TTS	\bLA	L A 
+TTS	\bKGB	K G B
+TTS	\bVIP	V I P
+TTS	\bFO	F O
+TTS	\bITV	I T V
+TTS	\bAIC	A I C
+TTS	\bTIT	T I T
+TTS	\bCEO	C E O
+TTS	\bEMT	E M T
+TTS	\bD[oO]D	D O D
+TTS	\bDEA	D E A
+TTS	\bCIA	C I A
+TTS	\bSUV	S U VX
+TTS	\bDNA	D N A
+TTS	\bPTSD	P T S D
+TTS	\bFBI	F B I
+TTS	\b[tT][vV]	T V
+TTS	\bG-III	G3
+TTS	\bMI-(\d)	M I \1
+TTS	\bKGB	K G B
+TTS	\bPorsche 911\b	Porsche-911
+TTS	\b911\b	9 1 1
+TTS	\brearview	rear view
+TTS	\bterra-cotta	terra cotta
+TTS	\b(\d\d):00	\1
+TTS	\b(\d):00	\1
+TTS	\bprestart	pre-start
+TTS	\bpreflight	pre-flight
+TTS	\bweekend	week-end
+TTS	\b[gG]oddamn	God damn
+TTS	\b[gG]oddammit	God damm it
+TTS	\$(\d*)\,000\,000\b	\1 million dollar 
+TTS	\$(\d*)\,000\b	\1 thousand dollar 
+TTS	\$(\d)00\b	\1 hundred dollar 
+TTS	\$(\d*)\,(\d*)\,(\d*)\b	\1 million, \2 thousand, \3 dollars 
+TTS	\$(\d*)\,(\d*)\b	\1 thousand \2 dollars 
+TTS	\$1\b	\1 dollar 
+TTS	\$(\d*)\b	\1 dollars 
+TTS	\b(\d\d)(\d\d)\b	\1 \2
+TTS	\b(\d)0([1-9])	\1 o \2
+TTS	\bpainkiller	pain killer
+TTS	\bkeypad	key pad
+TTS	\b([dD])umbass	\1umb ass
+TTS	\b([dB])adass	\1ad ass
+TTS	\b([sS])martass	\1mart ass
+TTS	\b([jJ])ackass	\1ack ass
+TTS	\bhotshot	hot shot
+TTS	\b([aA])ny(time|more)	\1ny \2
+TTS	\bob-gyn	O B G Y N
+TTS	\bStaten	Statten
+TTS	\bpissant	piss ant
+TTS	\bsonofabitch	son of a bitch
+TTS	\bhangar	hanger
+TTS	\b	
+TTS	\b	
+TTS	\b	
+TTS	\b	

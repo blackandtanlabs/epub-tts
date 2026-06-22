@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+<style>
+h1
+    {
+    font-size: 24px;
+    font-family: sans-serif;
+    margin-bottom: 5px;
+    }
+h2
+    {
+    font-size: 20px;
+    font-family: serif;
+    margin-bottom: 5px;
+    }
+h3
+    {
+    font-size: 16px;
+    font-family: serif;
+    margin-bottom: 5px;
+    }
+li
+    {
+    margin-bottom: 10px;
+    }
+a:link {
+    color: blue;}
+a:visited {
+    color: blue;}
+.clearfix
+    {
+    overflow: auto;
+    }
+
+html, body {
+    padding:0; margin:0;
+    width:100%;
+    height:100%;
+    background-color:#99ffff;
+    overflow:hidden;}
+body {
+    font-family:serif;
+    font-size:18px;
+    }
+.box
+	{ 
+	text-align:center;
+	border: solid 2px #000000; 
+	outline: 0;
+	background-image: radial-gradient(yellow,#f06d06);
+	height: 8vh;
+	width:49%;
+	border-radius: 40px;
+	margin:0.1vw;
+	font-size:3vh;
+	color:#000000; 
+	float: left;
+	} 
+.PFC-container {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100vw;
+    height: 95vh;
+    }
+.PFC-container .PFCpage {
+     height: 100%;
+     width: 97vw;
+     display: block;
+    padding-left:1vh;
+    padding-right:1vh;
+    }
+</style>
+</head>
+<body>
+<div style="font-family:sans-serif; font-size: 24px; text-align: center">
+<strong>Series</strong> with 10 or more books</div>
+<div class="PFC-container"><div class="PFCpage">
+<div style="background-image: radial-gradient(yellow,green);">
+{{1}}
+</body>
+</html>

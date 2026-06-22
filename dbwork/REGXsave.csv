@@ -1,0 +1,126 @@
+seq	pattern	replacement	use	function	comment
+100	#<p.*?>#im	<p>	html front	preg	strip crap from <p>
+200	#<div.*?>#im	<p>	html front	preg	change div’s to p’s
+300	#<svg.*?</svg>#im	“”	html front	preg	Drop <svg> entirely
+400	#<image.*?</image>#im	“”	html front	preg	Drop <image> entirely
+500	#<em\b[^>]*?>#im	\u{E000}	html front	preg	<em>
+600	#<i\b[^>]*?>#im	\u{E001}	html front	preg	<i>
+700	#<strong\b[^>]*?>#im	\u{E002}	html front	preg	<strong>
+800	#<b\b[^>]*?>#im	\u{E003}	html front	preg	<b>
+900	#<u\b[^>]*?>#im	\u{E004}	html front	preg	<u>
+1000	#<aside\b[^>]*?>#im	\u{E005}	html front	preg	<aside>
+1100	#<blockquote\b[^>]*?>#im	\u{E006}	html front	preg	<blockquote>
+1200	#<q\b[^>]*?>#im	\u{E007}	html front	preg	<q>
+1300	#<cite\b[^>]*?>#im	\u{E008}	html front	preg	<cite>
+1400	#<mark\b[^>]*?>#im	\u{E009}	html front	preg	<mark>
+1500	#<span.*?>#im	“”	html front	preg	<span> leave contents
+1600	#<a\b.*?</a>#im	“”	html front	preg	Drop <a> entirely
+1700	#</em>#im	\u{E020}	html front	preg	</em>
+1800	#</i>#im	\u{E021}	html front	preg	</i>
+1900	#</strong>#im	\u{E022}	html front	preg	</strong>
+2000	#</b>#im	\u{E023}	html front	preg	</b>
+2100	#</u>#im	\u{E024}	html front	preg	</u>
+2200	#</aside>#im	\u{E025}	html front	preg	</aside>
+2300	#</blockquote>#im	\u{E026}	html front	preg	</blockquote>
+2400	#</q>#im	\u{E027}	html front	preg	</q>
+2500	#</cite>#im	\u{E028}	html front	preg	</cite>
+2600	#</mark>#im	\u{E029}	html front	preg	</mark>
+2700	#</div>#im	\u{E030}	html front	preg	</p>
+2800	#</span>#im	“”	html front	preg	</span> (dropped)
+2900	\b[sS]gt\.*?	Sergeant	html front	preg	
+3000	\u{E000}	“”	html back	preg	<em>
+3100	\u{E001}	“”	html back	preg	<i>
+3200	\u{E002}	“”	html back	preg	<strong>
+3300	\u{E003}	“”	html back	preg	<b>
+3400	\u{E004}	“”	html back	preg	<u>
+3500	\u{E005}	“”	html back	preg	<aside>
+3600	\u{E006}	“”	html back	preg	<blockquote>
+3700	\u{E007}	“”	html back	preg	<q>
+3800	\u{E008}	“”	html back	preg	<cite>
+3900	\u{E009}	“”	html back	preg	<mark>
+4000	\u{E020}	“”	html back	preg	</em>
+4100	\u{E021}	“”	html back	preg	</i>
+4200	\u{E022}	“”	html back	preg	</strong>
+4300	\u{E023}	“”	html back	preg	</b>
+4400	\u{E024}	“”	html back	preg	</u>
+4500	\u{E025}	“”	html back	preg	</aside>
+4600	\u{E026}	“”	html back	preg	</blockquote>
+4700	\u{E027}	“”	html back	preg	</q>
+4800	\u{E028}	“”	html back	preg	</cite>
+4900	\u{E029}	“”	html back	preg	</mark>
+5000	\u{E030}	“”	html back	preg	</p>
+5100	multinational	⦃PRON:\0|multi national⦄	chapter back	str_replace	
+5200	multigenerational	⦃PRON:\0|multi generational⦄	chapter back	str_replace	
+5300	aka	⦃PRON:\0|also known as⦄	chapter back	str_replace	
+5400	AKA	⦃PRON:\0|also known as⦄	chapter back	str_replace	
+5500	DOB	⦃PRON:\0|date of birth⦄	chapter back	str_replace	
+5600	ME	⦃PRON:\0|Medical Examiner⦄	chapter back	str_replace	
+5700	CO	⦃PRON:\0|Commanding Officer⦄	chapter back	str_replace	
+5800	DOA	⦃PRON:\0|Dead On Arrival⦄	chapter back	str_replace	
+5900	HE	⦃PRON:\0|He⦄	chapter back	str_replace	
+6000	SHE	⦃PRON:\0|She⦄	chapter back	str_replace	
+6100	NYPD	⦃PRON:\0|N Y P D⦄	chapter back	str_replace	
+6200	PD	⦃PRON:\0|P D⦄	chapter back	str_replace	
+6300	Sgt[\.*?]*\b	⦃PRON:\0|Sergeant⦄	chapter back	str_replace	
+6400	DVD	⦃PRON:\0|D V D⦄	chapter back	str_replace	
+6500	JP	⦃PRON:\0|J P⦄	chapter back	str_replace	
+6600	IV	⦃PRON:\0|I V⦄	chapter back	str_replace	
+6700	ETA	⦃PRON:\0|E T ah⦄	chapter back	str_replace	
+6800	watercooler	⦃PRON:\0|water cooler⦄	chapter back	str_replace	
+6900	\bE\!	⦃PRON:\0|E⦄	chapter back	preg	E
+7000	\bMGM	⦃PRON:\0|M G M⦄	chapter back	preg	M G M
+7100	\bESPN	⦃PRON:\0|E S P N⦄	chapter back	preg	E S P N
+7200	\bCNN	⦃PRON:\0|C N N⦄	chapter back	preg	C N N
+7300	\bNBC	⦃PRON:\0|N B C⦄	chapter back	preg	N B C
+7400	\bCBS	⦃PRON:\0|C B S⦄	chapter back	preg	C B S
+7500	\bTMZ	⦃PRON:\0|T M Z⦄	chapter back	preg	T M Z
+7600	\bCSI	⦃PRON:\0|C S I⦄	chapter back	preg	C S I
+7700	\bWTF	⦃PRON:\0|W T F⦄	chapter back	preg	what the fuck
+7800	\bOMG	⦃PRON:\0|Oh my god⦄	chapter back	preg	Oh my god
+7900	\bNYPD	⦃PRON:\0|N Y P D⦄	chapter back	preg	N Y P D
+8000	\bLVPD	⦃PRON:\0|L V P D⦄	chapter back	preg	L V P D
+8100	\bLAPD	⦃PRON:\0|L eh P D⦄	chapter back	preg	Los Angeles P D
+8200	\bLAX	⦃PRON:\0|L eh ex⦄	chapter back	preg	Los Angeles International
+8300	\bLA\b	⦃PRON:\0|L eh⦄	chapter back	preg	Los Angeles
+8400	\bKGB	⦃PRON:\0|K G B⦄	chapter back	preg	K G B
+8500	\bVIP\b	⦃PRON:\0|V I P⦄	chapter back	preg	V I P
+8600	\bFO\b	⦃PRON:\0|F O⦄	chapter back	preg	Foreign Office
+8700	\bITV	⦃PRON:\0|I T V⦄	chapter back	preg	I T V
+8800	\bAIC	⦃PRON:\0|Agent In Charge⦄	chapter back	preg	Agent In Charge
+8900	\bTIT\b	⦃PRON:\0|T I T⦄	chapter back	preg	T I T
+9000	\bCEO	⦃PRON:\0|C E O⦄	chapter back	preg	C E O
+9100	\bD[oO]D	⦃PRON:\0|D O D⦄	chapter back	preg	D O D
+9200	\bDEA\b	⦃PRON:\0|D E eh⦄	chapter back	preg	Drug Enforcement Agency
+9300	\bCIA	⦃PRON:\0|C eye eh⦄	chapter back	preg	Central Intelligence Agency
+9400	\bSUV	⦃PRON:\0|S U V⦄	chapter back	preg	S U V
+9500	\bPTSD	⦃PRON:\0|P T S D⦄	chapter back	preg	P T S D
+9600	\bFBI	⦃PRON:\0|F B I⦄	chapter back	preg	F B I
+9700	\b[tT][vV]	⦃PRON:\0|T V⦄	chapter back	preg	T V
+9800	\bG-III	⦃PRON:\0|G3⦄	chapter back	preg	G3
+9900	\bMI-(\d)	⦃PRON:\0|M I \1⦄	chapter back	preg	M I \1
+10000	\bPorsche 911\b	⦃PRON:\0|Porsche-911⦄	chapter back	preg	Porsche-911
+10100	\b911\b	⦃PRON:\0|9 1 1⦄	chapter back	preg	9 1 1
+10200	\brearview	⦃PRON:\0|rear view⦄	chapter back	preg	rear view
+10300	\bterra-cotta	⦃PRON:\0|terra cotta⦄	chapter back	preg	terra cotta
+10400	\b(\d\d):00	⦃PRON:\0|\1 o clock⦄	chapter back	preg	\1
+10500	\bprestart	⦃PRON:\0|pre start⦄	chapter back	preg	pre-start
+10600	\bpreflight	⦃PRON:\0|pre flight⦄	chapter back	preg	pre-flight
+10700	\bweekend	⦃PRON:\0|week end⦄	chapter back	preg	week-end
+10800	\b[gG]oddamn	⦃PRON:\0|God damn⦄	chapter back	preg	God damn
+10900	\b[gG]oddammit	⦃PRON:\0|God damm it⦄	chapter back	preg	God damm it
+11000	\b(\d\d)(\d\d)\b	⦃PRON:\0|\1 \2⦄	chapter back	preg	\1 \2
+11100	\bpainkiller	⦃PRON:\0|pain killer⦄	chapter back	preg	pain killer
+11200	\bkeypad	⦃PRON:\0|key pad⦄	chapter back	preg	key pad
+11300	\b([dD])umbass	⦃PRON:\0|\1umb ass⦄	chapter back	preg	\1umb ass
+11400	\b([bB])adass	⦃PRON:\0|\1ad ass⦄	chapter back	preg	\1ad ass
+11500	\b([sS])martass	⦃PRON:\0|\1mart ass⦄	chapter back	preg	\1mart ass
+11600	\b([jJ])ackass	⦃PRON:\0|\1ack ass⦄	chapter back	preg	\1ack ass
+11700	\bhotshot	⦃PRON:\0|hot shot⦄	chapter back	preg	hot shot
+11800	\b([aA])ny(time|more)	⦃PRON:\0|\1ny \2⦄	chapter back	preg	\1ny \2
+11900	\bob-gyn	⦃PRON:\0|O B G Y N⦄	chapter back	preg	O B G Y N
+12000	\bStaten\b	⦃PRON:\0|Statten⦄	chapter back	preg	Statten
+12100	\bpissant	⦃PRON:\0|piss ant⦄	chapter back	preg	piss ant
+12200	\bsonofabitch	⦃PRON:\0|son of a bitch⦄	chapter back	preg	son of a bitch
+12300	\bhangar	⦃PRON:\0|hanger⦄	chapter back	preg	hanger
+12400	\bFDNY	⦃PRON:\0|F D N Y⦄	chapter back	preg	F D N Y
+410	#<img.*?</img>#im	“”	html front	preg	Drop <img> entirely

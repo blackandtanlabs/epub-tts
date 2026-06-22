@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+<style>
+.box
+	{ 
+	text-align:center;
+	border: solid 2px #000000; 
+	outline: 0;
+	background-image: radial-gradient(yellow,#f06d06);
+	height: 8vh;
+	width:49%;
+	border-radius: 40px;
+	margin:0.1vw;
+	font-size:3vh;
+	color:#000000; 
+	float: left;
+	} 
+</style>
+</head>
+<body>
+<p></p>
+</body>
+</html>

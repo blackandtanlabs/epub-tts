@@ -1,0 +1,103 @@
+abbr,expansion,kind,country_context,is_ambiguous,priority
+AL,Alabama,state,US,1,0
+AK,Alaska,state,US,0,0
+AZ,Arizona,state,US,0,0
+AR,Arkansas,state,US,0,0
+CA,California,state,US,1,0
+CO,Colorado,state,US,1,0
+CT,Connecticut,state,US,0,0
+DE,Delaware,state,US,0,0
+FL,Florida,state,US,0,0
+GA,Georgia,state,US,0,0
+HI,Hawaii,state,US,1,0
+ID,Idaho,state,US,1,0
+IL,Illinois,state,US,0,0
+IN,Indiana,state,US,1,0
+IA,Iowa,state,US,1,0
+KS,Kansas,state,US,0,0
+KY,Kentucky,state,US,0,0
+LA,Louisiana,state,US,1,0
+ME,Maine,state,US,1,0
+MD,Maryland,state,US,1,0
+MA,Massachusetts,state,US,1,0
+MI,Michigan,state,US,0,0
+MN,Minnesota,state,US,0,0
+MS,Mississippi,state,US,0,0
+MO,Missouri,state,US,1,0
+MT,Montana,state,US,0,0
+NE,Nebraska,state,US,0,0
+NV,Nevada,state,US,0,0
+NH,New Hampshire,state,US,0,0
+NJ,New Jersey,state,US,0,0
+NM,New Mexico,state,US,0,0
+NY,New York,state,US,0,0
+NC,North Carolina,state,US,0,0
+ND,North Dakota,state,US,0,0
+OH,Ohio,state,US,1,0
+OK,Oklahoma,state,US,1,0
+OR,Oregon,state,US,1,0
+PA,Pennsylvania,state,US,1,0
+RI,Rhode Island,state,US,0,0
+SC,South Carolina,state,US,0,0
+SD,South Dakota,state,US,0,0
+TN,Tennessee,state,US,0,0
+TX,Texas,state,US,0,0
+UT,Utah,state,US,0,0
+VT,Vermont,state,US,0,0
+VA,Virginia,state,US,0,0
+WA,Washington,state,US,0,0
+WV,West Virginia,state,US,0,0
+WI,Wisconsin,state,US,0,0
+WY,Wyoming,state,US,0,0
+DC,District of Columbia,district,US,0,0
+Ala.,Alabama,state,US,0,0
+Ariz.,Arizona,state,US,0,0
+Ark.,Arkansas,state,US,0,0
+Calif.,California,state,US,0,0
+Colo.,Colorado,state,US,0,0
+Conn.,Connecticut,state,US,0,0
+Del.,Delaware,state,US,0,0
+Fla.,Florida,state,US,0,0
+Ga.,Georgia,state,US,0,0
+Ill.,Illinois,state,US,0,0
+Ind.,Indiana,state,US,0,0
+Kans.,Kansas,state,US,0,0
+Ky.,Kentucky,state,US,0,0
+La.,Louisiana,state,US,0,0
+Me.,Maine,state,US,0,0
+Md.,Maryland,state,US,0,0
+Mass.,Massachusetts,state,US,0,0
+Mich.,Michigan,state,US,0,0
+Minn.,Minnesota,state,US,0,0
+Miss.,Mississippi,state,US,0,0
+Mo.,Missouri,state,US,1,0
+Mont.,Montana,state,US,0,0
+Nebr.,Nebraska,state,US,0,0
+Nev.,Nevada,state,US,0,0
+N.H.,New Hampshire,state,US,0,0
+N.J.,New Jersey,state,US,0,0
+N. Mex.,New Mexico,state,US,0,0
+N.Y.,New York,state,US,0,0
+N.C.,North Carolina,state,US,0,0
+N. Dak.,North Dakota,state,US,0,0
+Okla.,Oklahoma,state,US,0,0
+Oreg.,Oregon,state,US,0,0
+Pa.,Pennsylvania,state,US,1,0
+R.I.,Rhode Island,state,US,0,0
+S.C.,South Carolina,state,US,0,0
+S. Dak.,South Dakota,state,US,0,0
+Tenn.,Tennessee,state,US,0,0
+Tex.,Texas,state,US,0,0
+Vt.,Vermont,state,US,0,0
+Va.,Virginia,state,US,0,0
+Wash.,Washington,state,US,0,0
+W. Va.,West Virginia,state,US,0,0
+Wis.,Wisconsin,state,US,0,0
+Wyo.,Wyoming,state,US,0,0
+D.C.,District of Columbia,district,US,0,0
+D. C.,District of Columbia,district,US,0,0
+N.Dak.,North Dakota,state,US,0,0
+R. I.,Rhode Island,state,US,0,0
+S. C.,South Carolina,state,US,0,0
+S.Dak.,South Dakota,state,US,0,0
+W.Va.,West Virginia,state,US,0,0

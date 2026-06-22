@@ -1,0 +1,18 @@
+vendor	name	defn	speed	pitch	volume	seq
+Piper	215	=com.k2fsa.sherpa.onnx.tts.engine,en_US,vits-piper-en_US-libritts_r-medium_215	1.0	1.0	0.6	0
+Piper	268	=com.k2fsa.sherpa.onnx.tts.engine,en_US,vits-piper-en_US-libritts_r-medium_268	0.9	1.0	0.6	1
+Piper	450	=com.k2fsa.sherpa.onnx.tts.engine,en_US,vits-piper-en_US-libritts_r-medium_450	1.0	1.0	0.6	2
+Piper	635	=com.k2fsa.sherpa.onnx.tts.engine,en_US,vits-piper-en_US-libritts_r-medium_635	1.1	1.0	0.6	3
+Piper	819	=com.k2fsa.sherpa.onnx.tts.engine,en_US,vits-piper-en_US-libritts_r-medium_819	0.85	1.0	0.6	4
+Piper	833	=com.k2fsa.sherpa.onnx.tts.engine,en_US,vits-piper-en_US-libritts_r-medium_833	1.15	1.0	0.6	5
+Piper	703	=com.k2fsa.sherpa.onnx.tts.engine,en_US,vits-piper-en_US-libritts_r-medium_703	1.2	1.0	0.5	6
+Piper	507	=com.k2fsa.sherpa.onnx.tts.engine,en_US,vits-piper-en_US-libritts_r-medium_507	1.0	1.0	0.6	7
+Piper	545	=com.k2fsa.sherpa.onnx.tts.engine,en_US,vits-piper-en_US-libritts_r-medium_545	0.9	1.0	0.6	8
+Piper	574	=com.k2fsa.sherpa.onnx.tts.engine,en_US,vits-piper-en_US-libritts_r-medium_574	1.0	1.0	0.6	9
+Piper	Brit Woman 1	=com.k2fsa.sherpa.onnx.tts.engine,en_US,vits-piper-en_GB-alba-medium_0	1.0	1.0	0.6	100
+Piper	Brit Woman 2	=com.k2fsa.sherpa.onnx.tts.engine,en_US,vits-piper-en_GB-cori-medium_0	1.0	1.0	0.6	101
+Piper	Swede Woman	=com.acapelagroup.android.tts,swe_SWE_Emma,swe-SWE-Emma}}	1.0	1.0	0.6	200
+Piper	German Woman	=com.acapelagroup.android.tts,deu_DEU_Julia,deu-DEU-Julia	1.0	1.0	0.6	300
+Piper	French Woman	=com.acapelagroup.android.tts,fra_FRA_Alice,fra-FRA-Alice	1.0	1.0	0.6	400
+Piper	Russian Woman 1	=com.k2fsa.sherpa.onnx.tts.engine,ru_RU,vits-piper-ru_RU-irina-medium_0	1.0	1.0	0.6	500
+Piper	Russian Woman 2	=com.k2fsa.sherpa.onnx.tts.engine,ru_RU,vits-piper-ru_RU-ruslan-medium_0	1.0	2.0	0.6	501

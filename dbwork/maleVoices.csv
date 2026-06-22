@@ -1,0 +1,18 @@
+vendor	name	defn	speed	pitch	volume	seq
+Piper	32	=com.k2fsa.sherpa.onnx.tts.engine,en_US,vits-piper-en_US-libritts_r-medium_32	1.0	1.0	0.6	7
+Piper	42	=com.k2fsa.sherpa.onnx.tts.engine,en_US,vits-piper-en_US-libritts_r-medium_42	1.0	1.0	0.6	9
+Piper	402	=com.k2fsa.sherpa.onnx.tts.engine,en_US,vits-piper-en_US-libritts_r-medium_402	0.9	1.0	0.6	3
+Piper	416	=com.k2fsa.sherpa.onnx.tts.engine,en_US,vits-piper-en_US-libritts_r-medium_416	1.1	1.0	0.6	4
+Piper	700	=com.k2fsa.sherpa.onnx.tts.engine,en_US,vits-piper-en_US-libritts_r-medium_700	1.0	1.0	0.6	5
+Piper	317	=com.k2fsa.sherpa.onnx.tts.engine,en_US,vits-piper-en_US-libritts_r-medium_317	1.0	1.0	0.6	6
+Piper	816	=com.k2fsa.sherpa.onnx.tts.engine,en_US,vits-piper-en_US-libritts_r-medium_816	1.0	1.0	0.6	0
+Piper	828	=com.k2fsa.sherpa.onnx.tts.engine,en_US,vits-piper-en_US-libritts_r-medium_828	1.0	1.0	0.6	8
+Piper	5	=com.k2fsa.sherpa.onnx.tts.engine,en_US,vits-piper-en_US-libritts_r-medium_5	1.0	1.0	0.6	1
+Piper	6	=com.k2fsa.sherpa.onnx.tts.engine,en_US,vits-piper-en_US-libritts_r-medium_6	1.0	1.0	0.6	2
+Piper	Brit Man 1	=com.k2fsa.sherpa.onnx.tts.engine,en_US,vits-piper-en_GB-northern_english_male-medium_0	1.0	1.0	0.6	100
+Piper	Brit Man 2	=com.k2fsa.sherpa.onnx.tts.engine,en_US,vits-piper-en_GB-alan-medium_0	1.2	1.0	0.6	101
+Piper	Swede Man	=com.acapelagroup.android.tts,swe_SWE_Erik,swe-SWE-Erik	1.0	2.0	0.6	200
+Piper	German Man	=com.acapelagroup.android.tts,deu_DEU_Klaus,deu-DEU-Klaus	1.0	1.0	0.6	300
+Piper	French Man	=com.acapelagroup.android.tts,fra_FRA_Bruno,fra-FRA-Bruno	1.0	1.0	0.6	400
+Piper	Russian Man 2	=com.k2fsa.sherpa.onnx.tts.engine,ru_RU,vits-piper-ru_RU-denis-medium_0	1.0	1.0	0.7	501
+Piper	Russian Man 1	=com.k2fsa.sherpa.onnx.tts.engine,ru_RU,vits-piper-ru_RU-dmitri-medium_0	0.9	1.0	0.6	500

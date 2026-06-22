@@ -1,0 +1,58 @@
+@page {
+  margin-bottom: 5pt;
+  margin-top: 5pt;
+}
+@font-face {
+  font-family: "GreatVibes";
+  src: url(e9781668017746/fonts/GreatVibes-Regular.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "EBGaramond";
+  src: url(e9781668017746/fonts/EBGaramond-Italic.ttf);
+  font-style: italic;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "EBGaramond";
+  src: url(e9781668017746/fonts/EBGaramond-Regular.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "JosefinSans";
+  src: url(e9781668017746/fonts/JosefinSans-Italic.ttf);
+  font-style: italic;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "JosefinSans-Light";
+  src: url(e9781668017746/fonts/JosefinSans-Light.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "JosefinSans";
+  src: url(e9781668017746/fonts/JosefinSans-Regular.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "JustAnotherHand";
+  src: url(e9781668017746/fonts/JustAnotherHand-Regular.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Roboto-Light";
+  src: url(e9781668017746/fonts/Roboto-Light.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "RobotoCondensed";
+  src: url(e9781668017746/fonts/RobotoCondensed-Regular.ttf);
+  font-style: normal;
+  font-weight: normal;
+}

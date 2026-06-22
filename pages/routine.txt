@@ -1,0 +1,31 @@
+document.getElementById('foobar').addEventListener('keyup', e => {
+  console.log('Caret at: ', e.target.selectionStart);
+});
+function chooseBGcolor(picker)
+	{
+	document.documentElement.style.setProperty('--color', picker.value);
+//	document.getElementById("bookDisplay").style.backgroundColor = picker.value;
+	}
+function getText()
+	{
+	if (window.getSelection)
+		{
+		txt = window.getSelection();
+	console.log('Caret at: ', window.target.selectionStart)
+		}
+	else if (document.getElementById("bookDisplay").getSelection)
+		{
+		txt = document.getElementById("bookDisplay").getSelection();
+	console.log('Caret at: ', document.getElementById("bookDisplay").target.selectionStart)
+		}
+	else if (document.getElementById("bookDisplay").selection)
+		{
+		txt = document.getElementById("bookDisplay").selection.createRange().text;
+	console.log('Caret at: ', document.getElementById("bookDisplay").target.selectionStart)
+		} 
+	else
+		return;
+//alert(txt);
+	}
+el = document.getElementById("bookDisplay");
+el.addEventListener("mouseup", getText);

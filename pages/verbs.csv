@@ -1,0 +1,1249 @@
+label	usage	count
+is	(verb)	722
+are	(verb)	841
+get	(verb)	654
+see	(verb)	886
+need	(verb)	0
+know	(verb)	109
+would	(verb)	480
+find	(verb)	0
+take	(verb)	0
+want	(verb)	545
+does	(verb)	109
+learn	(verb)	0
+become	(verb)	0
+come	(verb)	327
+include	(verb)	0
+thank	(verb)	0
+provide	(verb)	0
+create	(verb)	0
+add	(verb)	0
+understand	(verb)	109
+consider	(verb)	109
+choose	(verb)	0
+develop	(verb)	0
+remember	(verb)	0
+determine	(verb)	0
+grow	(verb)	105
+allow	(verb)	0
+supply	(verb)	0
+bring	(verb)	218
+improve	(verb)	0
+maintain	(verb)	0
+begin	(verb)	0
+exist	(verb)	0
+tend	(verb)	0
+enjoy	(verb)	0
+perform	(verb)	0
+decide	(verb)	0
+identify	(verb)	0
+continue	(verb)	0
+protect	(verb)	0
+require	(verb)	0
+occur	(verb)	0
+write	(verb)	0
+approach	(verb)	0
+avoid	(verb)	0
+prepare	(verb)	0
+build	(verb)	0
+achieve	(verb)	0
+believe	(verb)	218
+receive	(verb)	0
+seem	(verb)	218
+discuss	(verb)	0
+realize	(verb)	0
+contain	(verb)	0
+follow	(verb)	109
+refer	(verb)	0
+solve	(verb)	0
+describe	(verb)	0
+prefer	(verb)	0
+prevent	(verb)	0
+discover	(verb)	0
+ensure	(verb)	0
+expect	(verb)	0
+invest	(verb)	0
+reduce	(verb)	0
+speak	(verb)	0
+appear	(verb)	0
+explain	(verb)	0
+explore	(verb)	0
+involve	(verb)	0
+lose	(verb)	0
+afford	(verb)	0
+agree	(verb)	0
+hear	(verb)	218
+remain	(verb)	0
+represent	(verb)	0
+apply	(verb)	0
+forget	(verb)	0
+recommend	(verb)	0
+rely	(verb)	0
+vary	(verb)	0
+generate	(verb)	0
+obtain	(verb)	0
+accept	(verb)	0
+communicate	(verb)	0
+complain	(verb)	0
+depend	(verb)	0
+enter	(verb)	0
+happen	(verb)	0
+indicate	(verb)	0
+suggest	(verb)	0
+survive	(verb)	0
+appreciate	(verb)	0
+compare	(verb)	0
+imagine	(verb)	0
+manage	(verb)	0
+differ	(verb)	0
+encourage	(verb)	0
+expand	(verb)	0
+prove	(verb)	0
+react	(verb)	0
+recognize	(verb)	0
+relax	(verb)	0
+replace	(verb)	0
+borrow	(verb)	0
+earn	(verb)	0
+emphasize	(verb)	0
+enable	(verb)	0
+operate	(verb)	0
+reflect	(verb)	0
+send	(verb)	0
+anticipate	(verb)	0
+assume	(verb)	0
+engage	(verb)	0
+enhance	(verb)	0
+examine	(verb)	0
+install	(verb)	0
+participate	(verb)	0
+intend	(verb)	0
+introduce	(verb)	0
+relate	(verb)	0
+settle	(verb)	109
+assure	(verb)	0
+attract	(verb)	0
+distribute	(verb)	0
+overcome	(verb)	0
+owe	(verb)	0
+succeed	(verb)	0
+suffer	(verb)	0
+throw	(verb)	109
+acquire	(verb)	0
+adapt	(verb)	0
+adjust	(verb)	0
+argue	(verb)	0
+arise	(verb)	0
+confirm	(verb)	0
+encouraging	(verb)	0
+incorporate	(verb)	0
+justify	(verb)	0
+organize	(verb)	0
+ought	(verb)	0
+possess	(verb)	0
+relieve	(verb)	0
+retain	(verb)	0
+shut	(verb)	0
+calculate	(verb)	0
+compete	(verb)	0
+consult	(verb)	0
+deliver	(verb)	0
+extend	(verb)	0
+investigate	(verb)	0
+negotiate	(verb)	0
+qualify	(verb)	0
+retire	(verb)	0
+rid	(verb)	0
+weigh	(verb)	0
+arrive	(verb)	0
+attach	(verb)	0
+behave	(verb)	0
+celebrate	(verb)	0
+convince	(verb)	0
+disagree	(verb)	0
+establish	(verb)	0
+ignore	(verb)	0
+imply	(verb)	0
+insist	(verb)	0
+pursue	(verb)	0
+remaining	(verb)	0
+specify	(verb)	0
+warn	(verb)	0
+accuse	(verb)	0
+admire	(verb)	0
+admit	(verb)	0
+adopt	(verb)	0
+announce	(verb)	0
+apologize	(verb)	0
+approve	(verb)	0
+attend	(verb)	0
+belong	(verb)	0
+commit	(verb)	0
+criticize	(verb)	0
+deserve	(verb)	0
+destroy	(verb)	0
+hesitate	(verb)	0
+illustrate	(verb)	0
+inform	(verb)	0
+manufacturing	(verb)	0
+persuade	(verb)	0
+pour	(verb)	0
+propose	(verb)	0
+remind	(verb)	0
+shall	(verb)	0
+submit	(verb)	0
+suppose	(verb)	0
+translate	(verb)	0
+be	(verb, auxiliary verb)	450
+use	(verb, noun)	0
+make	(verb, noun)	0
+look	(verb, noun, interjection)	0
+help	(verb, noun, interjection)	0
+go	(verb, noun, adjective)	0
+being	(verb, noun)	0
+think	(verb, adjective, noun)	292
+read	(verb, noun)	0
+keep	(verb, noun)	0
+start	(verb, noun)	0
+give	(verb, noun)	0
+play	(verb, noun)	0
+feel	(verb, noun)	0
+put	(verb, noun)	0
+set	(verb, noun, adjective)	0
+change	(verb, noun)	0
+say	(verb, interjection, noun)	571
+cut	(verb, noun)	0
+show	(verb, noun)	0
+try	(verb, noun)	0
+check	(verb, noun, interjection)	0
+call	(verb, noun)	0
+move	(verb, noun)	0
+pay	(verb, noun)	0
+let	(verb, noun)	0
+increase	(verb, noun)	0
+turn	(verb, noun)	0
+ask	(verb, noun)	0
+buy	(verb, noun)	0
+guard	(verb, noun)	0
+hold	(verb, noun)	0
+offer	(verb, noun)	0
+travel	(verb, noun)	0
+cook	(verb, noun)	0
+dance	(verb, noun)	0
+excuse	(verb, noun)	0
+live	(verb, adjective, adverb)	0
+purchase	(verb, noun)	0
+deal	(verb, noun)	0
+mean	(verb, adjective, noun)	218
+fall	(verb, noun)	0
+produce	(verb, noun)	0
+search	(verb, noun)	0
+spend	(verb, noun)	0
+talk	(verb, noun)	0
+upset	(verb, adjective)	0
+tell	(verb, noun)	0
+cost	(verb, noun)	0
+drive	(verb, noun)	0
+support	(verb, noun)	0
+remove	(verb, noun)	0
+return	(verb, noun)	0
+run	(verb, noun)	0
+appropriate	(verb, adjective)	0
+reserve	(verb, noun)	0
+leave	(verb, noun)	0
+reach	(verb, noun)	0
+rest	(verb, noun)	0
+serve	(verb, noun)	0
+watch	(verb, noun)	0
+charge	(verb, noun)	0
+break	(verb, noun)	0
+stay	(verb, noun)	0
+visit	(verb, noun)	0
+affect	(verb, noun)	0
+cover	(verb, noun)	0
+report	(verb, noun)	0
+rise	(verb, noun)	0
+walk	(verb, noun)	0
+pick	(verb, noun)	0
+lift	(verb, noun)	0
+mix	(verb, noun)	0
+stop	(verb, noun)	0
+teach	(verb, noun)	0
+concern	(verb, noun)	0
+fly	(verb, noun)	0
+born	(verb, adjective, past particple)	0
+gain	(verb, noun)	0
+save	(verb, noun, preposition)	0
+stand	(verb, noun)	0
+fail	(verb, noun)	0
+lead	(verb, noun)	0
+listen	(verb, noun)	0
+worry	(verb, noun)	0
+express	(verb, adjective, adverb)	0
+handle	(verb, noun)	0
+meet	(verb, noun)	0
+release	(verb, noun)	0
+sell	(verb, noun)	0
+finish	(verb, noun)	0
+press	(verb, noun)	0
+ride	(verb, noun)	0
+spread	(verb, noun)	0
+spring	(verb, noun)	0
+wait	(verb, noun)	0
+display	(verb, noun)	0
+flow	(verb, noun)	0
+hit	(verb, noun)	0
+shoot	(verb, noun, interjection)	0
+touch	(verb, noun)	0
+cancel	(verb, noun)	0
+cry	(verb, noun, idiom)	0
+dump	(verb, noun, idiom)	0
+push	(verb, noun, idiom)	0
+select	(verb, adjective)	0
+conflict	(verb, noun)	0
+die	(verb, idiom)	0
+eat	(verb, noun, idiom)	0
+fill	(verb, noun, idiom)	0
+jump	(verb, noun, adjective)	0
+kick	(verb, noun, idiom)	0
+pass	(verb, noun, idiom)	0
+pitch	(verb, noun)	0
+treat	(verb, noun)	0
+abuse	(verb, noun)	0
+beat	(verb, noun, adjective)	0
+burn	(verb, noun)	0
+deposit	(verb, noun)	0
+print	(verb, noun, adjective)	0
+raise	(verb, noun, idiom)	0
+sleep	(verb, noun, idiom)	0
+advance	(verb, noun, adjective)	0
+connect	(verb, adjective)	0
+consist	(verb, noun)	0
+contribute	(verb, idiom)	0
+draw	(verb, noun, idiom)	0
+fix	(verb, noun, idiom)	0
+hire	(verb, noun, adjective)	0
+join	(verb, noun)	0
+kill	(verb, noun, idiom)	0
+sit	(verb, idiom)	0
+tap	(verb, noun)	0
+win	(verb, noun)	0
+attack	(verb, noun)	0
+claim	(verb, noun)	0
+drag	(verb, noun, adjective)	0
+drink	(verb, noun)	0
+guess	(verb, noun, idiom)	0
+pull	(verb, noun)	0
+wear	(verb, noun, idiom)	0
+wonder	(verb, noun, idiom)	0
+count	(verb, noun, adjective)	0
+doubt	(verb, noun, idiom)	0
+feed	(verb, noun, idiom)	0
+impress	(verb, noun)	0
+repeat	(verb, noun)	0
+seek	(verb, idiom)	0
+sing	(verb, noun)	0
+slide	(verb, noun, idiom)	0
+strip	(verb, noun)	0
+wish	(verb, noun)	0
+combine	(verb, noun)	0
+command	(verb, noun)	0
+dig	(verb, noun)	0
+divide	(verb, noun)	0
+hang	(verb, noun, idiom)	0
+hunt	(verb, noun)	0
+march	(verb, noun, idiom)	0
+mention	(verb, noun, idiom)	0
+smell	(verb, noun)	0
+survey	(verb, noun)	0
+tie	(verb, noun, idiom)	0
+escape	(verb, noun, adjective)	0
+expose	(verb, idiom)	0
+gather	(verb, noun, idiom)	0
+hate	(verb, noun)	0
+repair	(verb, noun)	0
+scratch	(verb, noun, adjective)	0
+strike	(verb, noun, adjective)	0
+employ	(verb, noun)	0
+hurt	(verb, noun)	0
+laugh	(verb, noun)	0
+lay	(verb, noun, adjective)	0
+respond	(verb, noun)	0
+split	(verb, noun)	0
+strain	(verb, noun)	0
+struggle	(verb, noun)	0
+swim	(verb, noun)	0
+train	(verb, noun)	0
+wash	(verb, noun)	0
+waste	(verb, adjective, noun)	0
+convert	(verb, noun)	0
+crash	(verb, noun, adjective)	0
+fold	(verb, noun)	0
+grab	(verb, noun)	0
+hide	(verb, noun)	0
+miss	(verb, noun)	0
+permit	(verb, noun)	0
+quote	(verb, noun)	0
+recover	(verb, noun)	0
+resolve	(verb, noun)	0
+roll	(verb, noun)	0
+sink	(verb, noun)	0
+slip	(verb, noun)	0
+suspect	(verb, noun, adjective)	0
+swing	(verb, noun)	0
+twist	(verb, noun)	0
+concentrate	(verb, noun)	0
+estimate	(verb, noun)	0
+prompt	(verb, noun, adjective)	0
+refuse	(verb, noun)	0
+regret	(verb, noun)	0
+reveal	(verb, noun)	0
+rush	(verb, noun)	0
+shake	(verb, noun)	0
+shift	(verb, noun)	0
+shine	(verb, noun)	0
+steal	(verb, noun)	0
+suck	(verb, noun)	0
+surround	(verb, noun)	0
+dare	(verb, noun)	0
+delay	(verb, noun)	0
+hurry	(verb, noun)	0
+invite	(verb, noun)	0
+kiss	(verb, noun)	0
+marry	(verb, interjection)	0
+pop	(verb, noun, adverb)	0
+pray	(verb, adverb)	54
+pretend	(verb, adjective)	0
+punch	(verb, noun)	0
+quit	(verb, noun)	0
+reply	(verb, noun)	0
+resist	(verb, noun)	0
+rip	(verb, noun)	0
+rub	(verb, noun)	0
+smile	(verb, noun)	0
+spell	(verb, noun)	0
+stretch	(verb, noun)	0
+tear	(verb, noun)	0
+wake	(verb, noun)	0
+wrap	(verb, noun)	0
+was	(past, verb)	9220
+like	(preposition, verb, conjunction)	1435
+even	(adjective, verb, adverb)	218
+been	(past, verb)	750
+were	(past, verb)	1062
+own	(adjective, verb)	0
+must	(auxiliary verb, verb, adjective)	0
+according	(adjective, verb)	0
+involved	(past, verb)	22
+related	(past, verb)	0
+complete	(adjective, verb)	54
+limited	(past, verb)	0
+interested	(past, verb)	0
+concerned	(past, verb)	0
+ready	(adjective, verb)	0
+warm	(adjective, verb)	218
+experienced	(past, verb)	0
+correct	(adjective, verb)	0
+fixed	(past, verb)	0
+complicated	(past, verb)	0
+secure	(adjective, verb)	0
+advanced	(past, verb, adjective)	0
+organized	(past, verb)	0
+exact	(adjective, verb)	0
+lost	(adjective, verb, idiom)	0
+closed	(past, verb)	545
+firm	(adjective, verb, adverb)	0
+frequent	(adjective, verb)	0
+mixed	(past, verb)	52
+please	(adverb, verb, idiom)	0
+amazing	(adjective, verb)	0
+busy	(adjective, verb)	109
+detailed	(past, verb)	0
+sharp	(adjective, verb, adverb)	163
+wise	(adjective, verb, idiom)	0
+married	(past, verb, adjective)	0
+surprised	(past, verb)	0
+provided	(past, verb)	0
+dirty	(adjective, verb)	0
+loose	(adjective, verb)	0
+pleased	(past, verb)	109
+proposed	(past, verb)	0
+tired	(past, verb)	0
+worried	(past, verb)	131
+disappointed	(past, verb)	0
+nod	(verb, noun)	109
+shot	(verb, noun)	0
+began	(verb)	981
+blew	(verb)	109
+broke	(verb)	109
+brought	(verb)	105
+burst	(verb)	0
+came	(verb)	1611
+caught	(verb)	52
+could	(verb)	652
+drank	(verb)	161
+fell	(verb)	0
+felt	(verb)	0
+flew	(verb)	0
+found	(verb)	270
+gave	(verb)	2834
+got	(verb)	1348
+heard	(verb)	74
+held	(verb)	768
+hung	(verb)	384
+kept	(verb)	105
+knew	(verb)	109
+known	(verb)	0
+laid	(verb)	0
+led	(verb)	0
+left	(verb)	1846
+lit	(verb)	52
+made	(verb)	1599
+met	(verb)	0
+ran	(verb)	109
+rang	(verb)	109
+rose	(verb)	0
+said	(verb)	84109
+sank	(verb)	0
+sat	(verb)	436
+saw	(verb)	999
+shook	(verb)	4033
+slid	(verb)	218
+spoke	(verb)	0
+stood	(verb)	1185
+thought	(verb)	0
+threw	(verb)	0
+told	(verb)	222
+took	(verb)	2704
+went	(verb)	2458
+wrote	(verb)	218
+placed	(verb)	0
+reads	(verb)	0
+am	(verb)	0
+:	(verb)	0
+looked	(verb)	12373
+alighted	(verb)	0
+arose	(verb)	0
+awoke	(verb)	0
+bore	(verb)	0
+became	(verb)	0
+bent	(verb)	109
+bereaved	(verb)	0
+bade	(verb)	0
+bound	(verb)	0
+bled	(verb)	0
+blessed	(verb)	0
+bred	(verb)	0
+broadcast	(verb)	0
+built	(verb)	0
+burnt	(verb)	0
+bust	(verb)	0
+bought	(verb)	0
+chose	(verb)	0
+clung	(verb)	0
+clothed	(verb)	0
+crept	(verb)	0
+crowed	(verb)	0
+dealt	(verb)	0
+dug	(verb)	109
+did	(verb)	436
+drew	(verb)	0
+dreamt	(verb)	0
+drove	(verb)	0
+dwelt	(verb)	0
+ate	(verb)	0
+fed	(verb)	0
+fought	(verb)	0
+fled	(verb)	0
+flung	(verb)	0
+forbad	(verb)	0
+forecast	(verb)	0
+forgot	(verb)	0
+froze	(verb)	0
+gripped	(verb)	0
+grew	(verb)	218
+heaved	(verb)	0
+hid	(verb)	0
+knelt	(verb)	0
+knitted	(verb)	0
+leant	(verb)	0
+leapt	(verb)	0
+learnt	(verb)	0
+lent	(verb)	0
+meant	(verb)	436
+melted	(verb)	0
+mowed	(verb)	0
+paid	(verb)	0
+pent	(verb)	0
+pled	(verb)	0
+proved	(verb)	0
+rode	(verb)	0
+sawed	(verb)	0
+sought	(verb)	0
+sold	(verb)	0
+sent	(verb)	0
+sewed	(verb)	0
+sheared	(verb)	0
+shed	(verb)	0
+shone	(verb)	0
+shod	(verb)	0
+showed	(verb)	440
+shred	(verb)	0
+shrank	(verb)	0
+sang	(verb)	0
+slept	(verb)	0
+slung	(verb)	0
+slunk	(verb)	0
+slit	(verb)	0
+smelt	(verb)	0
+sowed	(verb)	0
+sped	(verb)	0
+spelt	(verb)	0
+spent	(verb)	109
+spilt	(verb)	0
+spun	(verb)	109
+spat	(verb)	0
+spoilt	(verb)	0
+sprang	(verb)	0
+stole	(verb)	0
+stuck	(verb)	0
+stung	(verb)	0
+stank	(verb)	0
+strode	(verb)	0
+struck	(verb)	0
+strung	(verb)	0
+strove	(verb)	0
+swore	(verb)	0
+sweat	(verb)	0
+swept	(verb)	0
+swelled	(verb)	0
+swam	(verb)	0
+swung	(verb)	109
+taught	(verb)	0
+tore	(verb)	0
+thrust	(verb)	0
+trod	(verb)	0
+understood	(verb)	0
+woke	(verb)	0
+wore	(verb)	109
+wove	(verb)	0
+wed	(verb)	0
+wept	(verb)	0
+wet	(verb)	109
+won	(verb)	87
+wound	(verb)	0
+wrung	(verb)	0
+alit	(verb)	0
+awaked	(verb)	0
+bereft	(verb)	0
+betted	(verb)	0
+blest	(verb)	0
+broadcasted	(verb)	0
+burned	(verb)	109
+busted	(verb)	0
+clad	(verb)	0
+dreamed	(verb)	0
+dwelled	(verb)	0
+forbade	(verb)	0
+forecasted	(verb)	0
+gript	(verb)	0
+hove	(verb)	0
+kneeled	(verb)	0
+knit	(verb)	0
+leaned	(verb)	1257
+leaped	(verb)	0
+learned	(verb)	0
+lighted	(verb)	0
+penned	(verb)	0
+pleaded	(verb)	0
+quitted	(verb)	0
+ridded	(verb)	0
+shoed	(verb)	0
+shredded	(verb)	0
+shrunk	(verb)	0
+smelled	(verb)	1
+speeded	(verb)	0
+spelled	(verb)	218
+spilled	(verb)	0
+spoiled	(verb)	0
+sprung	(verb)	0
+stunk	(verb)	0
+sweated	(verb)	0
+waked	(verb)	0
+wedded	(verb)	0
+wetted	(verb)	0
+stabbed	(verb)	327
+blink	(verb)	54
+frown	(verb)	208
+grunt	(verb)	0
+buzz	(verb)	0
+pant	(verb)	0
+sounded	(verb)	0
+sounding	(verb)	0
+sigh	(verb)	0
+materialized	(verb)	0
+handed	(verb)	0
+retorted	(verb)	0
+pointed	(verb)	0
+breathed	(verb)	0
+has	(verb)	0
+have	(verb, auxiliary verb)	0
+collect	(verb, adverb, noun)	0
+film	(noun, verb)	0
+water	(noun, verb, adjective)	0
+well	(adverb, verb, noun)	0
+example	(noun, verb)	0
+study	(noun, verb)	0
+form	(noun, verb)	0
+air	(noun, verb)	0
+place	(noun, verb)	0
+number	(noun, verb)	0
+part	(noun, verb, adverb)	0
+field	(noun, verb, adjective)	0
+fish	(noun, verb)	0
+process	(noun, verb)	0
+heat	(noun, verb)	0
+hand	(noun, verb)	0
+experience	(noun, verb)	0
+job	(noun, verb)	0
+book	(noun, verb)	0
+end	(noun, verb)	0
+point	(noun, verb)	0
+type	(noun, verb)	0
+value	(noun, verb)	0
+body	(noun, verb)	0
+market	(noun, verb)	0
+guide	(noun, verb)	0
+interest	(noun, verb)	0
+state	(noun, verb)	0
+radio	(noun, verb)	0
+course	(noun, verb)	0
+company	(noun, verb)	0
+price	(noun, verb)	0
+size	(noun, verb, adjective)	0
+card	(noun, verb)	0
+list	(noun, verb)	0
+mind	(noun, verb)	0
+trade	(noun, verb)	0
+line	(noun, verb)	0
+care	(noun, verb)	0
+group	(noun, verb)	0
+risk	(noun, verb)	0
+word	(noun, verb, interjection)	0
+force	(noun, verb)	0
+light	(noun, verb, adjective)	0
+name	(noun, verb, adjective)	0
+school	(noun, verb)	0
+amount	(noun, verb)	0
+order	(noun, verb)	0
+practice	(noun, verb)	0
+research	(noun, verb)	0
+sense	(noun, verb)	0
+service	(noun, verb)	0
+piece	(noun, verb)	0
+web	(noun, verb)	0
+boss	(noun, verb, adjective)	0
+sport	(noun, verb)	0
+page	(noun, verb)	0
+term	(noun, verb)	0
+test	(noun, verb)	0
+answer	(noun, verb)	0
+sound	(noun, verb, adjective)	0
+focus	(noun, verb)	0
+matter	(noun, verb)	0
+soil	(noun, verb)	0
+board	(noun, verb)	0
+oil	(noun, verb)	0
+picture	(noun, verb)	0
+access	(noun, verb, adjective)	0
+garden	(noun, verb)	0
+open	(adjective, verb, noun)	0
+range	(noun, verb)	0
+rate	(noun, verb)	0
+reason	(noun, verb)	0
+site	(noun, verb)	0
+demand	(noun, verb)	0
+exercise	(noun, verb)	0
+image	(noun, verb)	0
+case	(noun, verb)	0
+cause	(noun, verb)	0
+coast	(noun, verb)	0
+age	(noun, verb)	0
+boat	(noun, verb)	0
+record	(noun, verb)	0
+result	(noun, verb)	0
+section	(noun, verb)	0
+building	(noun, verb)	0
+mouse	(noun, verb)	0
+cash	(noun, verb)	0
+class	(noun, verb, adjective)	0
+dry	(adjective, verb, noun)	0
+plan	(noun, verb)	0
+store	(noun, verb)	0
+tax	(noun, verb)	0
+side	(noun, verb)	0
+space	(noun, verb)	0
+rule	(noun, verb)	0
+weather	(noun, verb)	0
+figure	(noun, verb)	0
+model	(noun, verb)	0
+source	(noun, verb)	0
+earth	(noun, verb)	0
+program	(noun, verb)	0
+design	(noun, verb)	0
+feature	(noun, verb)	0
+purpose	(noun, verb)	0
+question	(noun, verb)	0
+rock	(noun, verb)	0
+act	(noun, verb)	0
+birth	(noun, verb)	0
+dog	(noun, verb)	0
+object	(noun, verb)	0
+scale	(noun, verb)	0
+sun	(noun, verb)	0
+fit	(adjective, verb, noun)	0
+note	(noun, verb)	0
+profit	(noun, verb)	0
+rent	(noun, verb)	0
+speed	(noun, verb)	0
+style	(noun, verb)	0
+war	(noun, verb)	0
+bank	(noun, verb)	0
+content	(adjective, verb, noun)	0
+craft	(noun, verb)	0
+bus	(noun, verb)	0
+exchange	(noun, verb)	0
+eye	(noun, verb)	0
+fire	(noun, verb)	0
+position	(noun, verb)	0
+pressure	(noun, verb)	0
+stress	(noun, verb)	0
+advantage	(noun, verb)	0
+benefit	(noun, verb)	0
+box	(noun, verb)	0
+frame	(noun, verb)	0
+issue	(noun, verb)	0
+step	(noun, verb)	0
+cycle	(noun, verb)	0
+face	(noun, verb)	0
+metal	(noun, verb)	0
+paint	(noun, verb)	0
+review	(noun, verb)	0
+room	(noun, verb)	0
+screen	(noun, verb)	0
+structure	(noun, verb)	0
+view	(noun, verb)	0
+account	(noun, verb)	0
+ball	(noun, verb)	0
+discipline	(noun, verb)	0
+share	(noun, verb)	0
+balance	(noun, verb)	0
+bit	(noun, verb)	0
+black	(noun, verb, adjective)	0
+bottom	(noun, verb, adjective)	0
+gift	(noun, verb)	0
+impact	(noun, verb)	0
+machine	(noun, verb)	0
+shape	(noun, verb)	0
+tool	(noun, verb)	0
+wind	(noun, verb)	0
+address	(noun, verb)	0
+average	(noun, verb, adjective)	0
+career	(noun, verb, adjective)	0
+culture	(noun, verb)	0
+pot	(noun, verb)	0
+sign	(noun, verb)	0
+table	(noun, verb)	0
+task	(noun, verb)	0
+condition	(noun, verb)	0
+contact	(noun, verb)	0
+credit	(noun, verb)	0
+egg	(noun, verb)	0
+hope	(noun, verb)	0
+ice	(noun, verb)	0
+network	(noun, verb)	0
+separate	(adjective, verb, noun)	0
+attempt	(noun, verb)	0
+date	(noun, verb)	0
+effect	(noun, verb)	0
+link	(noun, verb)	0
+perfect	(adjective, verb, noun)	0
+post	(noun, verb, adverb)	0
+star	(noun, verb)	0
+voice	(noun, verb)	0
+challenge	(noun, verb, adjective)	0
+friend	(noun, verb)	0
+brush	(noun, verb)	0
+couple	(noun, verb)	0
+debate	(noun, verb)	0
+exit	(noun, verb)	0
+function	(noun, verb)	0
+lack	(noun, verb)	0
+plant	(noun, verb)	0
+spot	(noun, verb)	0
+summer	(noun, verb)	0
+taste	(noun, verb)	0
+theme	(noun, verb)	0
+track	(noun, verb)	0
+wing	(noun, verb)	0
+brain	(noun, verb)	0
+button	(noun, verb)	0
+click	(noun, verb)	0
+desire	(noun, verb)	0
+foot	(noun, verb)	0
+gas	(noun, verb)	0
+influence	(noun, verb)	0
+notice	(noun, verb)	0
+rain	(noun, verb)	0
+wall	(noun, verb)	0
+base	(noun, verb, adjective)	0
+damage	(noun, verb)	0
+distance	(noun, verb)	0
+pair	(noun, verb)	0
+staff	(noun, verb)	0
+sugar	(noun, verb)	0
+target	(noun, verb)	0
+text	(noun, verb)	0
+author	(noun, verb)	0
+discount	(noun, verb, adjective)	0
+file	(noun, verb)	0
+ground	(noun, verb, adjective)	0
+lesson	(noun, verb)	0
+officer	(noun, verb)	0
+phase	(noun, verb)	0
+reference	(noun, verb, adjective)	0
+register	(noun, verb)	0
+sky	(noun, verb)	0
+stage	(noun, verb)	0
+stick	(noun, verb)	0
+title	(noun, verb)	0
+trouble	(noun, verb)	0
+bowl	(noun, verb)	0
+bridge	(noun, verb)	0
+campaign	(noun, verb)	0
+club	(noun, verb)	0
+edge	(noun, verb, idiom)	0
+evidence	(noun, verb, idiom)	0
+fan	(noun, verb, idiom)	0
+letter	(noun, verb, idiom)	0
+lock	(noun, verb, idiom)	0
+option	(noun, verb)	0
+pack	(noun, verb, adjective)	0
+park	(noun, verb)	0
+quarter	(noun, verb, adjective)	0
+skin	(noun, verb)	0
+sort	(noun, verb)	0
+weight	(noun, verb)	0
+baby	(noun, verb, adjective)	0
+carry	(noun, verb)	0
+dish	(noun, verb, idiom)	0
+factor	(noun, verb)	0
+fruit	(noun, verb)	0
+muscle	(noun, verb, adjective)	0
+traffic	(noun, verb)	0
+trip	(noun, verb, idiom)	0
+appeal	(noun, verb)	0
+chart	(noun, verb)	0
+gear	(noun, verb, adjective)	0
+land	(noun, verb, idiom)	0
+log	(noun, verb)	0
+net	(noun, verb)	0
+season	(noun, verb, idiom)	0
+spirit	(noun, verb, idiom)	0
+tree	(noun, verb, idiom)	0
+wave	(noun, verb, idiom)	0
+belt	(noun, verb)	0
+bench	(noun, verb)	0
+commission	(noun, verb)	0
+copy	(noun, verb, idiom)	0
+drop	(noun, verb)	0
+progress	(noun, verb, idiom)	0
+project	(noun, verb)	0
+stuff	(noun, verb)	0
+ticket	(noun, verb, idiom)	0
+tour	(noun, verb)	0
+angle	(noun, verb)	0
+blue	(noun, verb, adjective)	0
+breakfast	(noun, verb)	0
+doctor	(noun, verb)	0
+dot	(noun, verb, idiom)	0
+dream	(noun, verb, adjective)	0
+essay	(noun, verb)	0
+father	(noun, verb)	0
+fee	(noun, verb)	0
+finance	(noun, verb)	0
+juice	(noun, verb, idiom)	0
+limit	(noun, verb)	0
+luck	(noun, verb, idiom)	0
+milk	(noun, verb, idiom)	0
+mouth	(noun, verb, idiom)	0
+pipe	(noun, verb)	0
+seat	(noun, verb)	0
+stable	(noun, verb)	0
+storm	(noun, verb, idiom)	0
+team	(noun, verb, adjective)	0
+bat	(noun, verb)	0
+beach	(noun, verb)	0
+blank	(noun, verb, adjective)	0
+catch	(noun, verb)	0
+chain	(noun, verb)	0
+cream	(noun, verb, adjective)	0
+crew	(noun, verb)	0
+detail	(noun, verb, idiom)	0
+interview	(noun, verb)	0
+kid	(noun, verb, adjective)	0
+mark	(noun, verb, idiom)	0
+match	(noun, verb)	0
+pain	(noun, verb, idiom)	0
+pleasure	(noun, verb)	0
+score	(noun, verb, idiom)	0
+screw	(noun, verb, idiom)	0
+sex	(noun, verb, idiom)	0
+shop	(noun, verb, interjection)	0
+shower	(noun, verb, idiom)	0
+suit	(noun, verb, idiom)	0
+tone	(noun, verb)	0
+window	(noun, verb)	0
+band	(noun, verb)	0
+block	(noun, verb)	0
+bone	(noun, verb, adverb)	0
+calendar	(noun, verb)	0
+cap	(noun, verb)	0
+coat	(noun, verb)	0
+contest	(noun, verb)	0
+court	(noun, verb, idiom)	0
+cup	(noun, verb)	0
+district	(noun, verb)	0
+finger	(noun, verb, idiom)	0
+garage	(noun, verb)	0
+guarantee	(noun, verb)	0
+hole	(noun, verb, idiom)	0
+hook	(noun, verb, idiom)	0
+implement	(noun, verb)	0
+layer	(noun, verb)	0
+lecture	(noun, verb)	0
+lie	(noun, verb, idiom)	0
+narrow	(adjective, verb, noun)	0
+nose	(noun, verb, idiom)	0
+partner	(noun, verb)	0
+profile	(noun, verb)	0
+respect	(noun, verb)	0
+rice	(noun, verb)	0
+schedule	(noun, verb)	0
+telephone	(noun, verb)	0
+tip	(noun, verb)	0
+bag	(noun, verb)	0
+battle	(noun, verb)	0
+bed	(noun, verb)	0
+bother	(noun, verb)	0
+cake	(noun, verb)	0
+code	(noun, verb)	0
+curve	(noun, verb, idiom)	0
+dimension	(noun, verb)	0
+ease	(noun, verb)	0
+farm	(noun, verb, idiom)	0
+fight	(noun, verb)	0
+gap	(noun, verb)	0
+grade	(noun, verb)	0
+horse	(noun, verb, adjective)	0
+host	(noun, verb)	0
+husband	(noun, verb)	0
+loan	(noun, verb, idiom)	0
+mistake	(noun, verb, idiom)	0
+nail	(noun, verb, idiom)	0
+noise	(noun, verb)	0
+occasion	(noun, verb, idiom)	0
+package	(noun, verb)	0
+pause	(noun, verb, idiom)	0
+phrase	(noun, verb)	0
+race	(noun, verb)	0
+sand	(noun, verb, idiom)	0
+sentence	(noun, verb)	0
+shoulder	(noun, verb, idiom)	0
+smoke	(noun, verb, idiom)	0
+stomach	(noun, verb)	0
+string	(noun, verb, idiom)	0
+towel	(noun, verb)	0
+vacation	(noun, verb)	0
+wheel	(noun, verb, idiom)	0
+arm	(noun, verb)	0
+associate	(noun, verb, adjective)	0
+bet	(noun, verb)	0
+blow	(noun, verb)	0
+border	(noun, verb)	0
+branch	(noun, verb)	0
+breast	(noun, verb)	0
+bunch	(noun, verb)	0
+chip	(noun, verb)	0
+coach	(noun, verb, adverb)	0
+cross	(noun, verb, adjective)	0
+document	(noun, verb)	0
+draft	(noun, verb, adjective)	0
+dust	(noun, verb)	0
+floor	(noun, verb)	0
+golf	(noun, verb)	0
+habit	(noun, verb)	0
+iron	(noun, verb)	0
+judge	(noun, verb)	0
+knife	(noun, verb)	0
+landscape	(noun, verb)	0
+league	(noun, verb)	0
+mail	(noun, verb)	0
+mess	(noun, verb)	0
+parent	(noun, verb)	0
+pattern	(noun, verb)	0
+pin	(noun, verb)	0
+pool	(noun, verb)	0
+pound	(noun, verb)	0
+request	(noun, verb)	0
+salary	(noun, verb)	0
+shame	(noun, verb)	0
+shelter	(noun, verb)	0
+shoe	(noun, verb)	0
+tackle	(noun, verb)	0
+tank	(noun, verb)	0
+trust	(noun, verb)	0
+assist	(noun, verb)	0
+bake	(noun, verb)	0
+bar	(noun, verb, preposition)	0
+bell	(noun, verb)	0
+bike	(noun, verb)	0
+blame	(noun, verb)	0
+brick	(noun, verb)	0
+chair	(noun, verb)	0
+closet	(noun, verb, adjective)	0
+clue	(noun, verb)	0
+collar	(noun, verb)	0
+comment	(noun, verb)	0
+conference	(noun, verb)	0
+devil	(noun, verb)	0
+diet	(noun, verb)	0
+fear	(noun, verb)	0
+fuel	(noun, verb)	0
+glove	(noun, verb)	0
+jacket	(noun, verb)	0
+lunch	(noun, verb)	0
+monitor	(noun, verb)	0
+mortgage	(noun, verb)	0
+nurse	(noun, verb)	0
+pace	(noun, verb, preposition)	0
+panic	(noun, verb)	0
+peak	(noun, verb, adjective)	0
+reward	(noun, verb)	0
+row	(noun, verb)	0
+sandwich	(noun, verb)	0
+shock	(noun, verb)	0
+spite	(noun, verb)	0
+spray	(noun, verb)	0
+surprise	(noun, verb)	0
+till	(noun, verb)	0
+transition	(noun, verb)	0
+weekend	(noun, verb)	0
+yard	(noun, verb)	0
+alarm	(noun, verb)	0
+bend	(noun, verb)	0
+bicycle	(noun, verb)	0
+bite	(noun, verb)	0
+blind	(noun, verb, adjective)	0
+bottle	(noun, verb)	0
+cable	(noun, verb)	0
+candle	(noun, verb)	0
+clerk	(noun, verb)	0
+cloud	(noun, verb)	0
+concert	(noun, verb)	0
+counter	(noun, verb, adverb)	0
+flower	(noun, verb)	0
+harm	(noun, verb)	0
+knee	(noun, verb)	0
+lawyer	(noun, verb)	0
+load	(noun, verb)	0
+mirror	(noun, verb)	0
+neck	(noun, verb)	0
+pension	(noun, verb)	0
+plate	(noun, verb)	0
+ruin	(noun, verb)	0
+ship	(noun, verb)	0
+skirt	(noun, verb)	0
+slice	(noun, verb)	0
+snow	(noun, verb)	0
+stroke	(noun, verb)	0
+switch	(noun, verb)	0
+trash	(noun, verb)	0
+tune	(noun, verb)	0
+zone	(noun, verb)	0
+anger	(noun, verb)	0
+award	(noun, verb)	0
+bid	(noun, verb)	0
+boot	(noun, verb)	0
+bug	(noun, verb)	0
+camp	(noun, verb, adjective)	0
+candy	(noun, verb)	0
+carpet	(noun, verb)	0
+cat	(noun, verb)	0
+champion	(noun, verb)	0
+channel	(noun, verb)	0
+clock	(noun, verb)	0
+comfort	(noun, verb)	0
+cow	(noun, verb)	0
+crack	(noun, verb, adjective)	0
+empty	(adjective, verb, noun)	0
+engineer	(noun, verb)	0
+entrance	(noun, verb)	0
+fault	(noun, verb)	0
+grass	(noun, verb)	0
+highlight	(noun, verb)	0
+island	(noun, verb)	0
+joke	(noun, verb)	0
+jury	(noun, verb, adjective)	0
+leg	(noun, verb)	0
+lip	(noun, verb)	0
+mate	(noun, verb)	0
+nerve	(noun, verb)	0
+passage	(noun, verb)	0
+pen	(noun, verb)	0
+pride	(noun, verb)	0
+priest	(noun, verb)	0
+promise	(noun, verb)	0
+resort	(noun, verb)	0
+ring	(noun, verb)	0
+roof	(noun, verb)	0
+rope	(noun, verb)	0
+sail	(noun, verb)	0
+scheme	(noun, verb)	0
+script	(noun, verb)	0
+slight	(adjective, verb, noun)	0
+smart	(adjective, verb, noun)	0
+sock	(noun, verb)	0
+station	(noun, verb)	0
+toe	(noun, verb)	0
+tower	(noun, verb)	0
+truck	(noun, verb)	0
+witness	(noun, verb)	0
+had	(verb)	0
+protest	(verb)	0
+massage	(verb)	0
+yell	(verb)	0
+chimed	(verb)	0
+stifle	(verb)	0
+prodded	(verb)	0
+jabbed	(verb)	0
+flashed	(verb)	0
+scowled	(verb)	0
+scream	(verb)	0
+buck	(verb)	0
+thrash	(verb)	0
+shrugged	(verb)	0
+cleared	(verb)	0
+snort	(verb)	0
+replied	(verb)	0
+answered	(verb)	0
+asked	(verb)	0
+recited	(verb)	0
+told	(verb)	0
+reported	(verb)	0
+continued	(verb)	0
+muttered	(verb)	0
+shouted	(verb)	0
+whispered	(verb)	0
+wondered	(verb)	0
+added	(verb)	0

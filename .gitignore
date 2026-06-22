@@ -1,0 +1,28 @@
+# Neural voice model weights — large, fetched separately (see SETUP)
+*.onnx
+
+# Generated audio output
+/audio/
+
+# Temporary synthesis working directories
+/_tmp_v3/
+/_tmp/
+
+# Local runtime state
+LastFile.txt
+lastFileProcessed.json
+*.log
+
+# Editors / IDEs / virtual environments
+.vscode/
+.history/
+.venv/
+piperenv_312/
+nbproject/
+__pycache__/
+*.pyc
+
+# OS / WSL artifacts
+.DS_Store
+Thumbs.db
+.wslconfig

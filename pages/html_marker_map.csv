@@ -1,0 +1,29 @@
+﻿index,pattern,replacement,comment
+100,#<p.*?>#i,<p>,strip crap from <p>
+200,#<div.*?>#i,<p>,change div’s to p’s
+300,#<svg.*?/svg>#i,,Drop <svg> entirely
+400,#<image.*?/image>#i,,Drop <image> entirely
+500,#<em\b[^>]*>#i,\u{E000},<em>
+600,#<i\b[^>]*>#i,\u{E001},<i>
+700,#<strong\b[^>]*>#i,\u{E002},<strong>
+800,#<b\b[^>]*>#i,\u{E003},<b>
+900,#<u\b[^>]*>#i,\u{E004},<u>
+1000,#<aside\b[^>]*>#i,\u{E005},<aside>
+1100,#<blockquote\b[^>]*>#i,\u{E006},<blockquote>
+1200,#<q\b[^>]*>#i,\u{E007},<q>
+1300,#<cite\b[^>]*>#i,\u{E008},<cite>
+1400,#<mark\b[^>]*>#i,\u{E009},<mark>
+1500,#<span.*?>#i,,<span> leave contents
+1600,#<a.*?/a>#i,,Drop <a> entirely
+1700,#</em>#i,\u{E020},</em>
+1800,#</i>#i,\u{E021},</i>
+1900,#</strong>#i,\u{E022},</strong>
+2000,#</b>#i,\u{E023},</b>
+2100,#</u>#i,\u{E024},</u>
+2200,#</aside>#i,\u{E025},</aside>
+2300,#</blockquote>#i,\u{E026},</blockquote>
+2400,#</q>#i,\u{E027},</q>
+2500,#</cite>#i,\u{E028},</cite>
+2600,#</mark>#i,\u{E029},</mark>
+2700,#</div>#i,\u{E030},</p>
+2800,#</span>#i,,</span> (dropped)

@@ -1,0 +1,27 @@
+// Somewhere in your main client bootstrap:
+require_once __DIR__ . '/ChapterMarker.php';
+$chapter = new ChapterMarker(
+    ['pause_ms' => 1200, 'keep_back' => 3],   // tweak per taste
+    true,                                     // bigBreakResets: true → reset=1 on Book/Part/Prologue/Epilogue
+    ['book','part']                           // keywords for “big” breaks
+);
+
+// When you open a new spine file:
+$chapter->onSpineEnter($bookId, $spineId, $spineHtmlFirstChunk);
+
+// Later, as you stream paragraphs from this spine file:
+$isFirstParaOfFile = ($p === 0); // or however you track
+$directive = $isFirstParaOfFile ? $chapter->chapterDirectiveForFirstPara($bookId) : '';
+
+$pre  = $yourRenderedPreHtml;  // already built
+$tts  = $yourTtsPlainText;     // already built
+
+if ($directive !== '') {
+    // prepend directive to BOTH pre and tts — reader.php will strip it before rendering/speaking
+    $pre = $directive . $pre;
+    $tts = $directive . $tts;
+}
+
+// …then return JSON to reader.php:
+// { ok:true, p: $p, pre_text: $pre, tts_text: $tts }
+

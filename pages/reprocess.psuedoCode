@@ -1,0 +1,20 @@
+Accum data into database during phase 1 and 2
+	atParagraph
+	speakerName
+	speakerNumber
+	explicit
+
+Phase 3
+
+receive command into reprocess.php
+	bookNo, atParagraph, toName
+read accum data for atParagraph
+determine toNumber of toName
+while no explicit speaker seen, process paragraph, whether matching or not
+	read TTS for paragraph
+	set speakerNumber to toNumber when === accum speakerNumber
+		may occur multiple times
+	write TTS for paragraph
+	read next accum data
+
+

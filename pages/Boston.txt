@@ -1,0 +1,17 @@
+Car: Cah
+Park: Pahk
+Idea: Idear
+Water: Watah
+Coffee: Caw-fee (sometimes "Cawfee")
+Remote (Clicker): Clicka
+Drinking Fountain (Bubbler): Bubblah
+Rubber Band (Elastic): Elastics (with an 'a' sound at the end)
+Mother (Mum): Mum (or "Mawm")
+Living Room (Parlor): Pah-luh
+Jeans (Dungarees): Dungarees (with a hard 'g')
+Milkshake (Frappe): Frah-ppeh 
+
+Key Features of the Accent:
+
+    Non-rhoticity: Dropping 'r' sounds at the end of words, but adding them to
+    words that start with a vowel sound (like 'idea').

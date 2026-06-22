@@ -725,7 +725,7 @@ async function fetchPara(p)
 	&& ttsCache.has(p))
 		return;
 
-	const u = new URL(CONF.clientParaUrl, window.location.origin);
+	const u = new URL(CONF.clientParaUrl, window.location.href);
 	u.searchParams.set('book', CONF.book);
 	u.searchParams.set('p', p);
 	const res = await fetch(u.href, {cache: 'no-cache'});

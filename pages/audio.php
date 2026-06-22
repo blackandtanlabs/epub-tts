@@ -15,7 +15,7 @@ function accessDB($DB, $sql, ...$parms)
 	$preparedSQL = $DB->prepare($sql);
 	$ret = $preparedSQL->execute($parms);
 	if (!$ret)
-		logMsg("Software error: $DB: $sql failed at readBook line " . __LINE__, "Error");
+		error_log("audio.php: query failed: $sql");
 	else
 		$data = $preparedSQL->fetchAll();
 	return $data;
@@ -58,14 +58,11 @@ if (!preg_match('/^[A-Za-z]:\\\\/', $rawPath) && strpos($rawPath, '\\\\') !== 0)
 $path = $rawPath;
 $size = filesize($path);
 $fp = fopen($path, 'rb');
-// sample path: C:\xampp\htdocs\TTS\audio\22611_p1744.wav"
+// Remember the listener's position from the file name, e.g. 22611_p1744.wav.
+// Only when it clearly carries a book id and paragraph number.
 $base = basename($path);
-$temp = preg_split('/([\._p])/', $base);
-
-// bookID is in $temp[0], paragraph is in $temp[2]
-$bookID = $temp[0];
-$lastParagraph = $temp[2];
-accessDB($readBookDB, "UPDATE bookTitle SET lastParagraph = $lastParagraph WHERE ID = $bookID");
+if (preg_match('/^(\d+)_p(\d+)\./', $base, $m))
+	accessDB($readBookDB, "UPDATE bookTitle SET lastParagraph = ? WHERE ID = ?", (int) $m[2], (int) $m[1]);
 
 if (!$fp)
 	{

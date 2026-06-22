@@ -79,6 +79,12 @@ if (!is_file($tts))
 $pre_text = @file_get_contents($pre);
 $tts_text = @file_get_contents($tts);
 
+// Hide the processing-time speaker/voice notes (kept in the stored text) so the
+// reader shows clean prose. These are subscript notes like [Spkr: ...] or
+// "Set prevVoice ...".
+if (is_string($pre_text))
+	$pre_text = preg_replace('#\s*<sub>(?:(?!</sub>).)*?(?:\[Spkr:|Set\s+prevVoice|⦃v:)(?:(?!</sub>).)*?</sub>#us', '', $pre_text);
+
 handlePronunciation($tts_text);
 $ignoreLit = '/(⦃d:)(.*)(⦄)/u';
 $tts_text = preg_replace($ignoreLit, '\2', $tts_text);

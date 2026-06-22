@@ -45,9 +45,13 @@ $SPEAK_PROXY_URL = 'speak.php'; // local relay to the speech engine
 $AUDIO_PROXY_URL = 'audio.php'; // streams WAVs from wav_path
 
 $book = $_GET['book'];
-$title = $_GET['title'];
-$author = $_GET['author'];
-$narrVoiceNumber = $_GET['narrator'];
+// These arrive in the URL when opened from a book page; otherwise fall back to
+// what was stored when the book was processed.
+$bookRow = accessDB($readBookDB, "SELECT title, author, narrVoice FROM bookTitle WHERE ID = ?", $book);
+$bookRow = $bookRow[0] ?? [];
+$title = $_GET['title']  ?? $bookRow['title']  ?? '';
+$author = $_GET['author'] ?? $bookRow['author'] ?? '';
+$narrVoiceNumber = $_GET['narrator'] ?? $bookRow['narrVoice'] ?? '';
 $theseMales = "males$book";
 $theseFemales = "females$book";
 $theseNewWords = "newWords$book";
@@ -664,7 +668,9 @@ function setState(s)
 	if (s === "Idle"
 	|| s === "Paused")
 		{
-		btnPlay.textContent = 'Paused';
+		// "Idle" is the ready-to-start state; only call it Paused once playback
+		// has actually been interrupted.
+		btnPlay.textContent = (s === "Paused") ? 'Paused' : 'Play';
 		curP = CONF.start;
 		}
 //console.log("setState2");

@@ -26,3 +26,6 @@ __pycache__/
 .DS_Store
 Thumbs.db
 .wslconfig
+
+# Per-book working cache (regenerable; may contain copyrighted book text)
+transient.db

@@ -80,7 +80,7 @@ function body_html_to_plain_text(string $bodyHtml, string $locale = 'US', string
 	// Post-processing pipeline (same order we used in the app)
 	$text = normalize_ellipses($raw);
 	$text = normalize_dashes($text);
-//	$text = insert_scene_breaks_as_hr($text);
+	$text = insert_scene_breaks_as_hr($text);
 	$text = expand_abbreviations($text, ['am_pm_mode' => 'labels', 'expand_months' => true]);
 //	$geo = load_geo_map();
 //	$text = expand_geo_abbr($text, $geo, $locale);
@@ -204,8 +204,6 @@ function walk_node(
     ?string $parentTag
 ): void
     {
-if ($node->nodeName === 'figure')
-$breakpoint=1;
     $nt = $node->nodeType;
     if ($nt === XML_TEXT_NODE)
         {

@@ -1,8 +1,9 @@
 <?php
+require_once __DIR__ . '/config.php';
 include_once('htmlClean.php');
 function seriesTitle($seriesN)
 	{
-	$a = new PDO("sqlite:g:/callib/metadata.db");
+	$a = calibre_db_or_notice();
 	$sql = "select id, name  from series where id = $seriesN";
 	$stmt = $a->prepare($sql);
 	$ret = $stmt->execute();
@@ -21,7 +22,7 @@ function seriesTitle($seriesN)
 	}
 function genreTitle($tag)
 	{
-	$a = new PDO("sqlite:g:/callib/metadata.db");
+	$a = calibre_db_or_notice();
 	$sql = "select *  from tags where id = $tag";
 	$stmt = $a->prepare($sql);
 	$ret = $stmt->execute();
@@ -42,7 +43,7 @@ function showBook($type, $bookN, $evenOdd, $genre, $authorName)
 	{
 	// type" 1=by author, 2=by Genre, not done yet [3=by Series, 4=by Title (and by latest)
 	// 5=by Rating]
-	$a = new PDO("sqlite:g:/callib/metadata.db");
+	$a = calibre_db_or_notice();
 	$sql = "select * from books"
 		. " left outer join comments on comments.book = books.id"
 		. " left outer join books_authors_link on books_authors_link.book = books.id"
@@ -81,7 +82,7 @@ function showBook($type, $bookN, $evenOdd, $genre, $authorName)
 		echo '    <a href="oneAuthor.php?author=' . $authorNum . "\">";
 		echo "<h2>by $authorName</h2></a>";
 		}
-	$cover = "g:/callib/" . $book[0]['path'] . "/cover.jpg";
+	$cover = LIBRARY_ROOT . "/" . $book[0]['path'] . "/cover.jpg";
 	$bookIDparm = rawurlencode($book[0]['path']);
 	if (file_exists($cover))
 		echo '<img src="fetch.php?img=' . $book[0]['path'] . '&dim=0" width="40%" style="float:left;margin-right:3px;">';
@@ -109,7 +110,7 @@ function showBook($type, $bookN, $evenOdd, $genre, $authorName)
 		{
 		/* todo */
 		// show up to 5 tags
-		$a = new PDO("sqlite:g:/callib/metadata.db");
+		$a = calibre_db_or_notice();
 		$sql2 = "select * from books_tags_link where book = $bookN order by tag";
 		$stmt2 = $a->prepare($sql2);
 		$res2 = $stmt2->execute();

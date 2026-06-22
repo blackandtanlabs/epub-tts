@@ -1,11 +1,12 @@
 <?php
+require_once __DIR__ . '/config.php';
 include_once('htmlClean.php');
 
 header("Cache-Control: max-age=3600"); //1 hour (60sec * 60min)
 $bookN = rawurldecode($_GET["book"]);   // numeric string
 $name = rawurldecode($_GET["name"]);
 $title = rawurldecode($_GET["title"]);
-$a=new PDO("sqlite:g:/callib/metadata.db");
+$a=calibre_db_or_notice();
 $template = file_get_contents('./showComments.txt', true);
 
 // First substitution: The whole page of the comments
@@ -24,7 +25,7 @@ $ret = $stmt->execute();
 if ($ret)
     {
     $record = $stmt->fetchAll();
-    $cover = "g:/callib/" . $record[0]['path'] . "/cover.jpg";
+    $cover = LIBRARY_ROOT . "/" . $record[0]['path'] . "/cover.jpg";
     if (file_exists($cover))
         {
         echo "<h1>$title</h1>";

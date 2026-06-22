@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/config.php';
 
 header("Cache-Control: max-age=3600"); //1 hour (60sec * 60min)
 
@@ -8,7 +9,7 @@ function intdiv_1($a, $b)
     }
 $s = $_GET["s"];   // numeric string, starting point
 $e = $_GET["e"];   // numeric string, ending point
-$a=new PDO("sqlite:c:/xampp/htdocs/callib/metadata.db");
+$a=calibre_db_or_notice();
 $sql = "select * from tag_browser_authors order by sort";
 $stmt = $a->prepare($sql);
 $res = $stmt->execute();

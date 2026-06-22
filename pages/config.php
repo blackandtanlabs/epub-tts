@@ -29,10 +29,33 @@ if (!defined('CALIBRE_DB'))
 if (!defined('ENGINE_URL'))
 	define('ENGINE_URL', getenv('FLASK_SPEAK_URL') ?: 'http://127.0.0.1:8077/speak');
 
-// PDO handle to the Calibre catalog, or null when no library is present yet.
+// PDO handle to the Calibre catalog, or null when no catalog is present.
 function calibre_db(): ?PDO
 	{
+	static $pdo = null;
+	if ($pdo !== null)
+		return $pdo;
 	if (!is_file(CALIBRE_DB))
 		return null;
-	return new PDO('sqlite:' . CALIBRE_DB);
+	return $pdo = new PDO('sqlite:' . CALIBRE_DB);
+	}
+
+// Same, but for the catalog browse pages: if there is no Calibre catalog,
+// show a friendly note (with a link to the folder-based Library) and stop.
+function calibre_db_or_notice(): PDO
+	{
+	$db = calibre_db();
+	if ($db instanceof PDO)
+		return $db;
+	http_response_code(200);
+	echo '<!DOCTYPE html><html><head><meta charset="utf-8"><title>No catalog</title>'
+		. '<style>body{font-family:serif;background:#99ff99;text-align:center;padding:6vh;font-size:2.6vh}'
+		. 'a{color:blue}</style></head><body>'
+		. '<h1 style="font-family:sans-serif">No Calibre catalog</h1>'
+		. '<p>These browse-by-author/genre/series pages read a Calibre <code>metadata.db</code>.</p>'
+		. '<p>None was found, but you can still browse and read everything from the '
+		. '<a href="library.php">Library</a>.</p>'
+		. '<p><a href="../index.php">&larr; Browse Books</a></p>'
+		. '</body></html>';
+	exit;
 	}

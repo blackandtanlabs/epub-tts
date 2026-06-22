@@ -1,8 +1,9 @@
 <?php
+require_once __DIR__ . '/config.php';
 
 header("Cache-Control: max-age=3600"); //1 hour (60sec * 60min)
 include_once('showBook.php');
-$a=new PDO("sqlite:g:/callib/metadata.db");
+$a=calibre_db_or_notice();
 $tag = htmlspecialchars($_GET["tag"]);   // numeric string
 $tag_title = rawurldecode($_GET["name"]);   // string
 //$nBooks = htmlspecialchars($_GET["n"]);   // numeric string

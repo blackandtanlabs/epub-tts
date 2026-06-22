@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/config.php';
 include_once('showBook.php');
 function intdiv_1($a, $b)
     {
@@ -7,7 +8,7 @@ function intdiv_1($a, $b)
 $s = $_GET["s"];   // numeric string, starting point
 $e = $_GET["e"];   // numeric string, ending point
 
-$a=new PDO("sqlite:g:/callib/metadata.db");
+$a=calibre_db_or_notice();
 $sql = "select * from books order by sort";
 $stmt = $a->prepare($sql);
 $res = $stmt->execute();

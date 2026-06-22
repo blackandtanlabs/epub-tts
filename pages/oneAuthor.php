@@ -1,9 +1,10 @@
 <?php
+require_once __DIR__ . '/config.php';
 include_once('showBook.php');
 //
 //header("Cache-Control: max-age=3600"); //1 hour (60sec * 60min)
 $author = $_GET["author"];   // numeric string
-$a=new PDO("sqlite:g:/callib/metadata.db");
+$a=calibre_db_or_notice();
 $template = file_get_contents('./oneAuthor.txt', true);
 
 // First substitution: Author's name

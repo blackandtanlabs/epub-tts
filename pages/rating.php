@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/config.php';
 include_once('showBook.php');
 
 header("Cache-Control: max-age=3600"); //1 hour (60sec * 60min)
@@ -21,7 +22,7 @@ if ($r==-1)
 
 //    Not every possible rating is present in the
 //	Calibre database, so we only show the ones present
-    $a=new PDO("sqlite:g:/callib/metadata.db");
+    $a=calibre_db_or_notice();
     $sql = "select * from ratings";
     $stmt = $a->prepare($sql);
     $res = $stmt->execute();
@@ -61,7 +62,7 @@ else
     || ($rate == 9))
           $pageTitle .= "+";		// half-star
 // get the books with that rating
-//    $a=new PDO("sqlite:g:/callib/metadata.db");
+    $a=calibre_db_or_notice();
     $sql = "select * from books"
           . " left outer join comments on comments.book = books.id"
           . " left outer join books_ratings_link on books_ratings_link.book = books.id"

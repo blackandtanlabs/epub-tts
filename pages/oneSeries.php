@@ -1,11 +1,12 @@
 <?php
+require_once __DIR__ . '/config.php';
 
 header("Cache-Control: max-age=3600"); //1 hour (60sec * 60min)
 include_once('showBook.php');
 $series = $_GET["series"];   // numeric string
 $seriesName = rawurldecode($_GET["name"]);   // string
 
-$a=new PDO("sqlite:g:/callib/metadata.db");
+$a=calibre_db_or_notice();
 $sql = "select * from books_series_link, books
    left outer join comments on comments.book = books.id
    left outer join books_ratings_link on books_ratings_link.book = books.id

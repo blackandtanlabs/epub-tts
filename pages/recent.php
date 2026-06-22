@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/config.php';
 
 include_once('showBook.php');
 //header("Cache-Control: max-age=3600"); //1 hour (60sec * 60min)
@@ -8,7 +9,7 @@ function intdiv_1($a, $b)
     }
 function ratingValue($b)
     {
-    $a=new PDO("sqlite:g:/callib/metadata.db");
+    $a=calibre_db_or_notice();
     $sql = "select * from books" 
         . " left outer join books_ratings_link on books_ratings_link.book = books.id"
         . " left outer join ratings on books_ratings_link.rating = ratings.id"
@@ -35,7 +36,7 @@ echo 'stmt:' . $stmt . '<br>';
         return(0);
         }
     }
-$a=new PDO("sqlite:g:/callib/metadata.db");
+$a=calibre_db_or_notice();
 $sql = "select * from books" 
     . " where 1=1 order by timestamp desc";
 $stmt = $a->prepare($sql);
@@ -59,7 +60,7 @@ for ($x=0, $evenOdd=0; $x<count($books) && $x<100; $x++)
     $author = $books[$x]['author_sort'];
     $bookN = $books[$x]['id'];
     $rating = ratingValue($bookN);
-    $cover = "g:/callib/" . $books[$x]['path'] . "/cover.jpg";
+    $cover = LIBRARY_ROOT . "/" . $books[$x]['path'] . "/cover.jpg";
     echo '<div class="clearfix" style="padding:3px;';
     $odd = $evenOdd % 2;
     if ($odd == 1)

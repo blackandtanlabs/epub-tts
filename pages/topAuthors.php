@@ -1,7 +1,8 @@
 <?php
+require_once __DIR__ . '/config.php';
 
 header("Cache-Control: max-age=3600"); //1 hour (60sec * 60min)
-$a=new PDO("sqlite:g:/callib/metadata.db");
+$a=calibre_db_or_notice();
 $sql = "select * from tag_browser_authors order by count desc";
 $stmt = $a->prepare($sql);
 $res = $stmt->execute();

@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/config.php';
 
 header("Cache-Control: no-store"); //1 hour (60sec * 60min)
 $bookN = $_GET["book"];   // numeric string, starting point
@@ -13,7 +14,7 @@ echo substr($template, 0, $insertPoint) . "<strong>$pageTitle</strong>";
 $insertPoint = strpos($template, "{{2}}");
 echo substr($template, $continuePoint, $insertPoint-$continuePoint);
 
-$a=new PDO("sqlite:g:/callib/metadata.db");
+$a=calibre_db_or_notice();
 $sql = "select * from books where id = $bookN";
 $stmt = $a->prepare($sql);
 If ($stmt)

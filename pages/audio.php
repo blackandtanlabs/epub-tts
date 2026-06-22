@@ -4,7 +4,8 @@ declare(strict_types=1);
 error_reporting(E_ALL & ~E_NOTICE);
 ini_set('display_errors', '0');
 
-$readBookDBname = "sqlite:" . __DIR__ . "..\..\..\TTS\labelCheck.db";
+require_once __DIR__ . '/config.php';
+$readBookDBname = "sqlite:" . APP_DB;
 $readBookDB = new PDO($readBookDBname);
 
 function accessDB($DB, $sql, ...$parms)

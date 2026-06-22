@@ -19,7 +19,8 @@
 //error_reporting(E_ALL & ~E_NOTICE);
 //ini_set('display_errors', '1');
 
-$readBookDBname = "sqlite:" . __DIR__ . "\..\..\TTS\labelCheck.db";
+require_once __DIR__ . '/config.php';
+$readBookDBname = "sqlite:" . APP_DB;
 $readBookDB = new PDO($readBookDBname);
 function accessDB($DB, $sql, ...$parms)
 	{
@@ -34,12 +35,14 @@ function accessDB($DB, $sql, ...$parms)
 	}
 
 // ----------- CONFIG -----------
-$CLIENT_PARA_URL = '/TTS2/pages/client_para.php'; // GET ?book=&p=
+// Sibling pages, addressed relative to this one so the reader works wherever
+// the site is mounted.
+$CLIENT_PARA_URL = 'client_para.php'; // GET ?book=&p=
 $BUFFER_MIN_BYTES = 3000000; // 3 MB before starting speaking/resuming buffering
 $BUFFER_MAX_BYTES = 3500000; // 3.5 MB ceiling to avoid CPU waste
 $MAX_INFLIGHT = 2; // max paragraphs concurrently being synthesized
-$SPEAK_PROXY_URL = '/TTS2/pages/speak.php'; // local relay to Flask /speak
-$AUDIO_PROXY_URL = '/TTS2/pages/audio.php'; // streams WAVs from wav_path/win
+$SPEAK_PROXY_URL = 'speak.php'; // local relay to the speech engine
+$AUDIO_PROXY_URL = 'audio.php'; // streams WAVs from wav_path
 
 $book = $_GET['book'];
 $title = $_GET['title'];
@@ -269,8 +272,8 @@ f.style.display = 'none';
 			// add debugging to PRE file to indicate what was done
 			$atParagraph = $_POST['atParagraph'];
 			$desiredName = $_POST['toName'];
-			$fileNameTTS = ".\\$book\\TTS\\$atParagraph.txt";
-			$fileNamePRE = ".\\$book\\PRE\\$atParagraph.txt";
+			$fileNameTTS = "./$book/TTS/$atParagraph.txt";
+			$fileNamePRE = "./$book/PRE/$atParagraph.txt";
 			$textTTS = file_get_contents($fileNameTTS);
 			$textPRE = file_get_contents($fileNamePRE);
 			if ($textTTS === false)
@@ -332,8 +335,8 @@ setTimeout(function() {
 				{
 				$atParagraph+=2;
 				$prevP = $atParagraph -1;
-//				$fileNameTTS = ".\\$book\\TTS\\$atParagraph.txt";
-				$fileNamePRE = ".\\$book\\PRE\\$prevP.txt";
+//				$fileNameTTS = "./$book/TTS/$atParagraph.txt";
+				$fileNamePRE = "./$book/PRE/$prevP.txt";
 //				$textTTS = file_get_contents($fileNameTTS);
 				$textPRE = file_get_contents($fileNamePRE);
 				$processData = accessDB($readBookDB, "SELECT * FROM $theseProcesses WHERE atParagraph = '$prevP'");
@@ -351,8 +354,8 @@ setTimeout(function() {
 <?php
 					break 2;
 					}
-				$fileNameTTS = ".\\$book\\TTS\\$atParagraph.txt";
-				$fileNamePRE = ".\\$book\\PRE\\$atParagraph.txt";
+				$fileNameTTS = "./$book/TTS/$atParagraph.txt";
+				$fileNamePRE = "./$book/PRE/$atParagraph.txt";
 				$textTTS = file_get_contents($fileNameTTS);
 				$textPRE = file_get_contents($fileNamePRE);
 				$processData = accessDB($readBookDB, "SELECT * FROM $theseProcesses WHERE atParagraph = '$atParagraph'");
@@ -528,7 +531,7 @@ f.style.display = 'none';
 					$next = 0;
 				else
 					{
-					$fileNameTTS = ".\\$book\\TTS\\$next.txt";
+					$fileNameTTS = "./$book/TTS/$next.txt";
 					if (file_get_contents($fileNameTTS) === false)
 						{
 //						$next = $currentP[0]['lastParagraph'];

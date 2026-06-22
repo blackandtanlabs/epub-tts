@@ -4,7 +4,7 @@ FROM php:8.2-apache
 # Extensions the reader relies on: SQLite (PDO), DOM/libxml (HTML cleaning),
 # mbstring (Unicode text handling). curl is bundled in the base image.
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends libxml2-dev libsqlite3-dev \
+    && apt-get install -y --no-install-recommends libxml2-dev libsqlite3-dev libonig-dev \
     && docker-php-ext-install pdo_sqlite dom mbstring \
     && rm -rf /var/lib/apt/lists/*
 

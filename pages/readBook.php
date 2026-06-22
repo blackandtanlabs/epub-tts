@@ -10,7 +10,8 @@ $phase = rawurldecode($_GET["phase"]);
 $outputParm = rawurldecode($_GET["output"]);
 $temp = preg_split('/[\(\)](.*?)/', strrev($path));
 $bookID = $temp[1];
-$readBookDBname = "sqlite:" . __DIR__ . "\..\..\TTS\labelCheck.db";
+require_once __DIR__ . '/config.php';
+$readBookDBname = "sqlite:" . APP_DB;
 $readBookDB = new PDO($readBookDBname);
 //$readBookDB->exec('PRAGMA journal_mode = WAL;');
 //$readBookDB->exec('PRAGMA wal_autocheckpoint=10;');
@@ -240,7 +241,7 @@ $softHyphen = json_decode('"\u00AD"');
 $unkDash = '—';
 $dashRepl = $thinSpace . $dash . $thinSpace;
 $dashRepl2 = $thinSpace . $emDash . $thinSpace;
-$fullPath = "g:/callib/" . $path;
+$fullPath = LIBRARY_ROOT . "/" . $path;
 $filesAvail = scandir($fullPath);
 $filename = "";
 $depth = 0;
@@ -464,9 +465,9 @@ if ($phase === 'initial')
 	if (!(is_dir($epubContentsFolder)))
 		{
 		mkdir($epubContentsFolder);
-		mkdir($epubContentsFolder . "\\CLEAN");
-		mkdir($epubContentsFolder . "\\PRE");
-		mkdir($epubContentsFolder . "\\TTS");
+		mkdir($epubContentsFolder . "/CLEAN");
+		mkdir($epubContentsFolder . "/PRE");
+		mkdir($epubContentsFolder . "/TTS");
 		}
 
 	$mainDir = $ebookObject->getContentLoc();
@@ -621,9 +622,9 @@ if ($phase === 'initial')
 			if ($htmBody === "")
 				continue;
 			breakLongParagraphs($htmBody);
-			$outTTSfile = "$thisDir\\$bookID\\CLEAN\\";
+			$outTTSfile = "$thisDir/$bookID/CLEAN/";
 			file_put_CLEAN_by_paragraph($outTTSfile, $htmBody, true);
-			$outTTSfile = "$thisDir\\$bookID\\PRE\\";
+			$outTTSfile = "$thisDir/$bookID/PRE/";
 			file_put_PRE_by_paragraph($outTTSfile, $htmBody, true);
 //			echo '1';
 //			ob_flush();
@@ -646,8 +647,8 @@ if ($phase === 'initial')
 if ($phase !== 'continue')
 	{
 	$time_start = hrtime(true);
-	"$thisDir\\$bookID\\CLEAN\\";
-	$directory = "$thisDir\\$bookID\\CLEAN";
+	"$thisDir/$bookID/CLEAN/";
+	$directory = "$thisDir/$bookID/CLEAN";
 	$files = scandir($directory);
 	$fileCount = count($files) - 2;
 	if ($phase === 'reprocess')
@@ -685,7 +686,7 @@ if ($phase !== 'continue')
 		// 3. Force the browser to show the update
 		flush();
 
-		$htmBody = file_get_contents("$thisDir\\$bookID\\CLEAN\\$f.txt");
+		$htmBody = file_get_contents("$thisDir/$bookID/CLEAN/$f.txt");
 
 		//	processCAPSwords($htmBody);
 		$element = preg_split('/\n/u', $htmBody, NULL, PREG_SPLIT_DELIM_CAPTURE);
@@ -722,7 +723,7 @@ if ($phase !== 'continue')
 			flush();
 			}
 		$htmBody = implode('', $element);
-		$outTTSfile = "$thisDir\\$bookID\\TTS\\$f.txt";
+		$outTTSfile = "$thisDir/$bookID/TTS/$f.txt";
 		if ($phase !== 'reprocess')
 			processAllNames($htmBody);
 		if ($f === 903)
@@ -1118,10 +1119,10 @@ function addDebugToPRE($text, $paragraphNumber)
 	global $thisDir;
 
 	$ignoreLit = '/(<sub.*sub>)/u';
-	$pre = file_get_contents("$thisDir\\$bookID\\PRE\\$paragraphNumber.txt");
+	$pre = file_get_contents("$thisDir/$bookID/PRE/$paragraphNumber.txt");
 	if ($phase === 'reprocess')
 		$pre = preg_replace($ignoreLit, "", $pre);
-	file_put_contents("$thisDir\\$bookID\\PRE\\$paragraphNumber.txt", $pre . $text);
+	file_put_contents("$thisDir/$bookID/PRE/$paragraphNumber.txt", $pre . $text);
 	}
 
 function speakerSeenBefore($speaker)
@@ -2096,7 +2097,7 @@ function rrmdir($src)
 
 function cleanOtherBookDataFiles($bookID)
 	{
-	$audioFiles = __DIR__ . "\\..\\audio\\";
+	$audioFiles = __DIR__ . "/../audio/";
 	if (file_Exists($audioFiles))
 		{
 		// files only, contains multiple books, delete all not $bookID

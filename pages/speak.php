@@ -10,7 +10,8 @@ ini_set('display_errors', '1');
 //error_log("[speak] hit from ".$_SERVER['REMOTE_ADDR']);
 //error_log("[speak.php] forwarding to http://127.0.0.1:8077/speak");
 // If you later expose across TailScale/LAN, you can still keep this proxy local.
-$FLASK_URL = 'http://127.0.0.1:8077/speak';
+require_once __DIR__ . '/config.php';
+$FLASK_URL = ENGINE_URL;
 
 // Read inbound JSON
 $raw = file_get_contents('php://input');

@@ -18,7 +18,8 @@ function accessDB($DB, $sql, ...$parms)
 	}
 function handlePronunciation(&$text)
 	{
-	$readBookDBname = "sqlite:" . __DIR__ . "\..\..\TTS\labelCheck.db";
+	require_once __DIR__ . '/config.php';
+	$readBookDBname = "sqlite:" . APP_DB;
 	$readBookDB = new PDO($readBookDBname);
 	$Pronunciations = accessDB($readBookDB, "SELECT * FROM pronunciation ORDER BY priority DESC");
 //	$PronounceReplacements = accessDB($readBookDB, "SELECT replacement FROM pronunciation ORDER BY priority DESC");
@@ -64,10 +65,11 @@ if ($book === '' || !preg_match('/^[A-Za-z0-9_.\-]+$/', $book))
 if ($p < 0)
 	fail(400, 'invalid_p');
 
-// TODO: adapt these to your real storage
-$ROOT = 'c:/xampp/htdocs/';
-$pre = $ROOT . "\\$book\\PRE\\$p.txt";
-$tts = $ROOT . "\\$book\\TTS\\$p.txt";
+// Per-book working files live next to this page, under <bookID>/PRE and /TTS,
+// written by readBook.php during processing.
+$ROOT = __DIR__;
+$pre = "$ROOT/$book/PRE/$p.txt";
+$tts = "$ROOT/$book/TTS/$p.txt";
 
 if (!is_file($pre))
 	fail(404, 'pre_not_found', ['book' => $book, 'p' => $p, 'path' => $pre]);

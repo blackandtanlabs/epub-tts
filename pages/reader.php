@@ -360,82 +360,31 @@ setTimeout(function() {
 //echo "Started on paragraph '$atParagraph' replacing $soughtSpeakerVoice with $desiredSpeakerVoice.<br>";
 			while (true)
 				{
-				$atParagraph+=2;
-				$prevP = $atParagraph -1;
-//				$fileNameTTS = "./$book/TTS/$atParagraph.txt";
-				$fileNamePRE = "./$book/PRE/$prevP.txt";
-//				$textTTS = file_get_contents($fileNameTTS);
-				$textPRE = file_get_contents($fileNamePRE);
-				$processData = accessDB($readBookDB, "SELECT * FROM $theseProcesses WHERE atParagraph = '$prevP'");
-				if (count($processData) === 0)
-					{
-//					$textPRE .= "<sup>Stopped voice changes because non-spoken paragraph handling not yet adequate.</sup>";
-//					file_put_contents($fileNamePRE, $textPRE);
-?>
-<script>
-alert("Stopped voice changes because non-spoken paragraph handling not yet adequate, case 1.");
-setTimeout(function() {
-    history.go(-1);
-}, 150); // The delay can be adjusted if needed
-</script>
-<?php
-					break 2;
-					}
+				// Walk forward one paragraph at a time, gliding over narration
+				// (non-spoken) paragraphs, and keep applying the corrected voice
+				// to this speaker's continuing dialogue. Stop at the end of the
+				// book or when a different, explicitly named speaker appears.
+				$atParagraph += 1;
 				$fileNameTTS = "./$book/TTS/$atParagraph.txt";
 				$fileNamePRE = "./$book/PRE/$atParagraph.txt";
+				if (!is_file($fileNameTTS))
+					break 2;	// reached the end of the book
 				$textTTS = file_get_contents($fileNameTTS);
 				$textPRE = file_get_contents($fileNamePRE);
+				if ($textTTS === false)
+					break 2;	// no text to work on
 				$processData = accessDB($readBookDB, "SELECT * FROM $theseProcesses WHERE atParagraph = '$atParagraph'");
 				if (count($processData) === 0)
-					{
-//					$textPRE .= "<sup>Stopped voice changes because non-spoken paragraph handling not yet adequate.</sup>";
-//					file_put_contents($fileNamePRE, $textPRE);
-?>
-<script>
-alert("Stopped voice changes because non-spoken paragraph handling not yet adequate, case 2.");
-setTimeout(function() {
-    history.go(-1);
-}, 150); // The delay can be adjusted if needed
-</script>
-<?php
-					break 2;
-					}
-				if ($textTTS === false)
-					{
-?>
-<script>
-alert("Stopped because no more text files found.");
-setTimeout(function() {
-    history.go(-1);
-}, 150); // The delay can be adjusted if needed
-</script>
-<?php
-//					$textPRE .= "<sup>Stopped on paragraph '$atParagraph' because no more text files found.</sup>";
-//					file_put_contents($fileNamePRE, $textPRE);
-					break 2;	// no text to work on
-					}
+					continue;	// narration: skip and keep scanning
 				// next file exists and processData exists
 				$foundSpeakerVoice = getSpeakerVoiceFromTTSfile($textTTS);
 //echo "2. foundSpeakerVoice = $foundSpeakerVoice<br>";
 				if ($processData[0]['specified'] === 'Y')
 					{
 					if ($foundSpeakerVoice !== $desiredSpeakerVoice)
-						{
-//$textPRE .= "<sup>Stopped on paragraph '$atParagraph' because different specifically named speaker, $foundSpeakerVoice, found instead of $desiredSpeakerVoice.</sup>";
-//					file_put_contents($fileNamePRE, $textPRE);
-?>
-<script>
-alert("Stopped because different specifically named speaker found.");
-setTimeout(function() {
-    history.go(-1);
-}, 150); // The delay can be adjusted if needed
-</script>
-<?php
-					break 2;
-//echo "Stopped on paragraph '$atParagraph' because different specifically named speaker, $foundSpeaker Voice, found instead of $desiredSpeakerVoice.<br>";
-//					break 2;	// finished processData with name other than $soughtSpeakerVoice
-						}
-//					continue;
+						// A different, explicitly named speaker: this run of the
+						// corrected speaker's dialogue is done. Stop quietly.
+						break 2;
 					}
 				if ($desiredSpeakerVoice !== $foundSpeakerVoice)
 					{

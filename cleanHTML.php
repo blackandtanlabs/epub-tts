@@ -94,6 +94,7 @@ function body_html_to_plain_text(string $bodyHtml, string $locale = 'US', string
 	// Post-processing pipeline (same order we used in the app)
 	$text = normalize_ellipses($raw);
 	$text = normalize_dashes($text);
+	$text = strip_image_references($text);
 	$text = insert_scene_breaks_as_hr($text);
 	$text = expand_abbreviations($text, ['am_pm_mode' => 'labels', 'expand_months' => true]);
 //	$geo = load_geo_map();
@@ -395,6 +396,36 @@ function normalize_ellipses(string $text): string
 //		$text = str_replace($k, $v, $text);
 	return $text;
 	}
+/**
+ * Remove stray image-file references that some EPUBs leave in the text as
+ * visible captions or lists — e.g. "09-092.jpg (45K)" — so they are neither
+ * shown nor read aloud as "zero ninety two dot jay peg".
+ */
+function strip_image_references(string $text): string
+	{
+	// Protect real HTML tags (e.g. <img src="...jpg">, used for display) so the
+	// cleanup below only touches bare filenames sitting in the visible text.
+	$tags = [];
+	$text = preg_replace_callback('/<[^>]+>/', function ($m) use (&$tags)
+		{
+		$key = "\x01" . count($tags) . "\x01";
+		$tags[] = $m[0];
+		return $key;
+		}, $text);
+
+	// A filename ending in an image extension, with an optional "(45K)"-style
+	// size right after it.
+	$pattern = '/\b[\w\-]+\.(?:jpe?g|png|gif|svg|webp|bmp|tiff?)\b(?:\s*\(\s*\d+\s*[KMG]?B?\s*\))?/iu';
+	$text = preg_replace($pattern, '', $text);
+	// Tidy any whitespace the removal left behind.
+	$text = preg_replace('/[ \t]{2,}/', ' ', $text);
+	$text = preg_replace('/ +([.,;:!?])/', '$1', $text);
+
+	// Restore the protected tags.
+	$text = preg_replace_callback('/\x01(\d+)\x01/', fn($m) => $tags[(int) $m[1]], $text);
+	return $text;
+	}
+
 /**
  * Replace ornament/dinkus lines with "<hr>" (visual scene break for your UI; you strip before TTS).
  */

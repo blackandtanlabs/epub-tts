@@ -66,6 +66,18 @@ if (count($startup) === 1)
 	}
 else
 	$start = 0;
+// An explicit ?start= (used by chapter jumps) overrides the saved position.
+if (isset($_GET['start']) && is_numeric($_GET['start']) && (int) $_GET['start'] >= 0)
+	$start = (int) $_GET['start'];
+
+// Chapters recorded during processing, for the jump menu.
+$chapterTable = "chapters$book";
+$chapters = [];
+try {
+	$chapters = accessDB($readBookDB, "SELECT para, title, level FROM $chapterTable ORDER BY para");
+} catch (Exception $e) {
+	$chapters = [];
+}
 $toolBarSize=0;
 
 $conf = [
@@ -119,6 +131,17 @@ echo "<h1>$title</h1><h3>by $author</h3><h4>[$narrVoiceNumber]</h4>";
 			<button id="btnPlay">&nbsp;&nbsp;&nbsp;Play&nbsp;&nbsp;&nbsp;</button>
 <!--			<span class="pill" id="pillState">Paused</span>-->
 			<button id="btnMenu" class="secondary" title="Menu">Menu</button>
+<?php if (count($chapters) > 1): ?>
+			<select id="chapterJump" class="secondary" title="Jump to chapter"
+				onchange="if(this.value!=='')location.href='reader.php?book=<?= htmlspecialchars($book, ENT_QUOTES) ?>&start='+this.value;">
+				<option value="">Chapters…</option>
+<?php foreach ($chapters as $ch):
+		$label = trim((string)$ch['title']) !== '' ? $ch['title'] : ('Section at ¶' . $ch['para']);
+		$sel = ((int)$ch['para'] === (int)$start) ? ' selected' : ''; ?>
+				<option value="<?= (int)$ch['para'] ?>"<?= $sel ?>><?= htmlspecialchars($label, ENT_QUOTES) ?></option>
+<?php endforeach; ?>
+			</select>
+<?php endif; ?>
 			<button class="secondary" onclick="increaseFontSize()">Aa+</button>
 			<button class="secondary" onclick="decreaseFontSize()">Aa-</button>
 			<div id="status">

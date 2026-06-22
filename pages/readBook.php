@@ -92,6 +92,7 @@ CONST Rbrack = "⦄";
 //header("Cache-Control: no-store");
 require_once('ebookRead.php');
 require_once('ebookData.php');
+require_once('ChapterMarker.php');
 date_default_timezone_set("America/Chicago");
 
 function logMsg($txt, $level = "Warning")
@@ -470,6 +471,12 @@ if ($phase === 'initial')
 		mkdir($epubContentsFolder . "/TTS");
 		}
 
+	// Record where each chapter (spine file) begins, for the reader's jump menu.
+	$chapterTable = "chapters$bookID";
+	accessDB($readBookDB, "CREATE TABLE IF NOT EXISTS $chapterTable (para INTEGER PRIMARY KEY, title TEXT, level INTEGER)");
+	accessDB($readBookDB, "DELETE FROM $chapterTable");
+	$chapterMarker = new ChapterMarker(['pause_ms' => 1200, 'keep_back' => 3], true, ['book','part']);
+
 	$mainDir = $ebookObject->getContentLoc();
 	if ($mainDir === "./")
 		$mainDir = "";
@@ -621,6 +628,21 @@ if ($phase === 'initial')
 			$htmBody = trim(body_html_to_plain_text($htm, 'US', $currentInternalDir));
 			if ($htmBody === "")
 				continue;
+			// This spine file becomes a chapter; its first paragraph is the
+			// current global paragraph counter. Derive a title from the markup.
+			$chapterStartPara = $CLEANfileNumber;
+			$chapterMarker->onSpineEnter($bookID, $id, $htm);
+			$chapterDirective = $chapterMarker->chapterDirectiveForFirstPara($bookID);
+			if ($chapterDirective !== "")
+				{
+				$chapterTitle = "";
+				$chapterLevel = 1;
+				if (preg_match('/title="([^"]*)"/u', $chapterDirective, $mTitle))
+					$chapterTitle = html_entity_decode($mTitle[1], ENT_QUOTES, 'UTF-8');
+				if (preg_match('/level=(\d+)/', $chapterDirective, $mLevel))
+					$chapterLevel = (int) $mLevel[1];
+				accessDB($readBookDB, "INSERT OR REPLACE INTO $chapterTable(para, title, level) VALUES(?, ?, ?)", $chapterStartPara, $chapterTitle, $chapterLevel);
+				}
 			breakLongParagraphs($htmBody);
 			$outTTSfile = "$thisDir/$bookID/CLEAN/";
 			file_put_CLEAN_by_paragraph($outTTSfile, $htmBody, true);

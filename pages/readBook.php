@@ -296,6 +296,13 @@ if ($contentFolder === './')
 $spineInfo = $ebookObject->getSpine();
 $parts = explode(" - ", $filename);
 $bookTitle = trim($parts[0]);
+// Prefer the EPUB's own title metadata; fall back to the file name (without
+// its extension) when the EPUB carries no title.
+$epubTitle = trim((string) ($ebookObject->ebookData->title ?? ''));
+if ($epubTitle !== '')
+	$bookTitle = $epubTitle;
+else
+	$bookTitle = preg_replace('/\.epub$/i', '', $bookTitle);
 $speaker = "";
 $fixData = array();
 

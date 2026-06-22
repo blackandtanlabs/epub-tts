@@ -123,7 +123,10 @@ $conf = [
 		<div class="toolbar">
 			<p>
 <?php
-echo "<h1>$title</h1><h3>by $author</h3><h4>[$narrVoiceNumber]</h4>";
+$displayTitle = preg_replace('/\.epub$/i', '', (string) $title);
+echo "<h1>" . htmlspecialchars($displayTitle) . "</h1><h3>by " . htmlspecialchars((string) $author) . "</h3>";
+if (trim((string) $narrVoiceNumber) !== "")
+	echo "<h4>narrator voice " . htmlspecialchars((string) $narrVoiceNumber) . "</h4>";
 ?>
 			</p>
 		</div>	

@@ -10,6 +10,8 @@ This is not a cloud service and not a product. It is a home-built reader,
 designed for one household's bookshelf and shared here in the hope that the
 ideas in it are useful to others.
 
+![The reader, mid-book, with the chapter menu](docs/images/03-reader.png)
+
 ## What makes it special
 
 Most text-to-speech tools read in a single flat voice. This one was built by

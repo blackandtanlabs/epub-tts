@@ -657,9 +657,8 @@ function setState(s)
 	if (s === "Idle"
 	|| s === "Paused")
 		{
-		// "Idle" is the ready-to-start state; only call it Paused once playback
-		// has actually been interrupted.
-		btnPlay.textContent = (s === "Paused") ? 'Paused' : 'Play';
+		// Idle and Paused are both not-playing states; the button invites Play.
+		btnPlay.textContent = 'Play';
 		curP = CONF.start;
 		}
 //console.log("setState2");
@@ -1115,23 +1114,31 @@ async function playCurrent() {
     playSeg(0);
 }
 // ---- Controls ----
+function refreshPlayButton()
+	{
+	btnPlay.textContent = isPlaying ? 'Pause' : 'Play';
+	}
+// One button that plays and pauses. Pausing leaves the spot untouched so the
+// next click resumes the same clip mid-sentence rather than starting it over.
 elPlay.addEventListener('click', async () =>
 	{
-	btnPlay.textContent = "Playing";
 	if (isPlaying)
+		{
+		isPlaying = false;
+		audio.pause();
+		refreshPlayButton();
 		return;
+		}
 	isPlaying = true;
-	await ensureMinBuffer();
-	playCurrent();
+	refreshPlayButton();
+	if (audio.src && !audio.ended && audio.currentTime > 0)
+		audio.play().catch(() => { isPlaying = false; refreshPlayButton(); });
+	else
+		{
+		await ensureMinBuffer();
+		playCurrent();
+		}
 	});
-
-//elPause.addEventListener('click', () =>
-//	{
-//	btnPlay.textContent = "Paused";
-//	isPlaying = false;
-//	audio.pause();
-//	setState('Paused');
-//	});
 //elBack.addEventListener('click', () =>
 //	{
 //	// back one paragraph (no prioritization; may need to buffer)

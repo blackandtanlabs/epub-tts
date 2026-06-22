@@ -1,0 +1,26 @@
+# The speech engine: Python + Piper (kept hot in memory) + SoX post-processing.
+FROM python:3.12-slim
+
+# SoX provides the channel/pitch/earwax post-processing the engine shells out to.
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends sox libsox-fmt-all \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /var/www/html
+
+# Install Python dependencies first so the layer caches across code changes.
+COPY requirements.txt /tmp/requirements.txt
+RUN pip install --no-cache-dir -r /tmp/requirements.txt
+
+# The application code is bind-mounted in development (see docker-compose.yml).
+# For a self-contained image, copy it in instead:
+#   COPY . /var/www/html
+
+ENV APP_DIR=/var/www/html \
+    HOST=0.0.0.0 \
+    PORT=8077 \
+    DEBUG=0
+
+EXPOSE 8077
+
+CMD ["python", "TTSserver_v3_single_hot.py"]

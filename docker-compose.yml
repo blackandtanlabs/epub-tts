@@ -1,0 +1,33 @@
+# Two services that mirror the original design: a PHP/Apache web side (the
+# XAMPP role) and a Python/Piper speech engine (the WSL role). They share the
+# application directory as a volume, exactly as both halves shared the htdocs
+# folder on the original machine.
+
+services:
+  engine:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.engine
+    environment:
+      APP_DIR: /var/www/html
+      HOST: 0.0.0.0
+      PORT: "8077"
+      DEBUG: "0"
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - "8077:8077"   # exposed for direct testing; the web side uses the internal network
+
+  web:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.web
+    environment:
+      FLASK_SPEAK_URL: http://engine:8077/speak
+      AUDIO_DIR: /var/www/html/audio
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - "8888:80"
+    depends_on:
+      - engine

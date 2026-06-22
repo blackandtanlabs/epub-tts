@@ -17,14 +17,16 @@ from typing import Any, Dict, List, Optional, Tuple
 from flask import Flask, request, jsonify
 
 # ----------------------------- CONFIG (run under WSL) -----------------------------
-CWD          = "/mnt/c/xampp/htdocs/TTS"
-DB_PATH      = os.path.join(CWD, "labelCheck.db")
-MODEL_PATH   = os.path.join(CWD, "en_US-libritts_r-medium.onnx")
-AUDIO_DIR    = os.path.join(CWD, "audio")      # final outputs
-TMP_DIR_ROOT = os.path.join(CWD, "_tmp_v3")    # temp working dir
+CWD          = os.environ.get("APP_DIR") or os.path.dirname(os.path.abspath(__file__))
+DB_PATH      = os.environ.get("DB_PATH")    or os.path.join(CWD, "labelCheck.db")
+MODEL_PATH   = os.environ.get("MODEL_PATH") or os.path.join(CWD, "en_US-libritts_r-medium.onnx")
+AUDIO_DIR    = os.environ.get("AUDIO_DIR")  or os.path.join(CWD, "audio")      # final outputs
+TMP_DIR_ROOT = os.environ.get("TMP_DIR")    or os.path.join(CWD, "_tmp_v3")    # temp working dir
 
-SOX_EXE      = "sox"   # apt install sox libsox-fmt-all
-HOST, PORT, DEBUG   = "127.0.0.1", 8077, True
+SOX_EXE      = os.environ.get("SOX_EXE", "sox")   # apt install sox libsox-fmt-all
+HOST  = os.environ.get("HOST", "127.0.0.1")
+PORT  = int(os.environ.get("PORT", "8077"))
+DEBUG = os.environ.get("DEBUG", "1") not in ("0", "false", "False", "")
 
 FINAL_SR     = 44100
 FINAL_CH     = 2

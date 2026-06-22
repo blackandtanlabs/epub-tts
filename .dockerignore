@@ -1,0 +1,9 @@
+.git
+audio/
+_tmp_v3/
+.venv/
+piperenv_312/
+.history/
+.vscode/
+nbproject/
+*.log

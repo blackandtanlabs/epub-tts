@@ -1,0 +1,18 @@
+# The reader and library web interface: PHP + Apache (the XAMPP role).
+FROM php:8.2-apache
+
+# Extensions the reader relies on: SQLite (PDO), DOM/libxml (HTML cleaning),
+# mbstring (Unicode text handling). curl is bundled in the base image.
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends libxml2-dev libsqlite3-dev \
+    && docker-php-ext-install pdo_sqlite dom mbstring \
+    && rm -rf /var/lib/apt/lists/*
+
+# Apache already serves /var/www/html; the app is bind-mounted there in
+# development (see docker-compose.yml). For a self-contained image:
+#   COPY . /var/www/html
+
+# Where the web side reaches the speech engine (overridden by compose).
+ENV FLASK_SPEAK_URL=http://engine:8077/speak
+
+EXPOSE 80

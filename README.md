@@ -81,4 +81,14 @@ a light touch, in keeping with how he built it.
 
 ## License
 
-To be decided. Copyright is retained by the family.
+Copyright © 2016–2026 Patrick Clark and family.
+
+EPUB TTS is free software: you can redistribute it and/or modify it under the
+terms of the **GNU General Public License, version 3**, as published by the Free
+Software Foundation. See [LICENSE](LICENSE) for the full text.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE. Under the GPL, anyone who shares a modified version must
+share their source as well — so this work, and everything built upon it, stays
+free.

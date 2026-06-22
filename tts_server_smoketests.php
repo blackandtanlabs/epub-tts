@@ -4,7 +4,7 @@
 // RTF(server) = server.elapsed_sec / wav_duration
 // RTF(client) = wall_time_for_HTTP / wav_duration
 
-$BASE = "http://127.0.0.1:8077";
+$BASE = getenv('ENGINE_URL') ?: "http://127.0.0.1:8077";
 $ENDPOINT = "$BASE/speak";
 $OUTDIR = __DIR__ . DIRECTORY_SEPARATOR . "audio";
 

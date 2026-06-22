@@ -241,7 +241,13 @@ class HotPiperPython:
         except Exception as e:
             logging.warning("inspect.signature failed: %s", e)
 
-        self.sample_rate = int(getattr(self.voice, "sample_rate", 22050))
+        # Newer Piper keeps the rate on .config; older builds exposed it on the
+        # voice itself. Try both, then fall back to the model's usual rate.
+        self.sample_rate = int(
+            getattr(self.voice, "sample_rate", None)
+            or getattr(getattr(self.voice, "config", None), "sample_rate", None)
+            or 22050
+        )
         # Warm once to avoid first-phoneme clipping
         try:
             self._synth_to_wav(";", speaker=0, length_scale=1.0, noise_scale=0.667,
@@ -403,7 +409,9 @@ def sox_postprocess(in_wav: str, chan: str, pitch: float, volume: float, tmp_dir
     effects += remix_args
     effects += ["channels","2","rate",str(FINAL_SR)]
     effects += ["pitch", str(pitch)]
-    if need_earwax: effects += ["earwax"]
+    # pitch resamples internally, so restore the final rate before earwax,
+    # which insists on stereo 44100 (CDDA) and is meant to run on the finished audio.
+    if need_earwax: effects += ["rate", str(FINAL_SR), "earwax"]
 
     cmd = [SOX_EXE, "-D", "--multi-threaded", in_wav, "-b", str(FINAL_BITS), out_wav] + effects
     p = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)

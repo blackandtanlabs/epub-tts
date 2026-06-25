@@ -1,0 +1,17 @@
+EPUB TTS was created by Patrick Clark.
+
+Author and creator
+  Patrick Clark wrote this software, and rewrote it, over many years. The
+  reader, the voice library he auditioned by hand, the markup he invented
+  for narration and dialogue, and the long-accumulated rules for reading
+  prose aloud well are all his.
+
+Stewardship
+  After Patrick passed away in June 2026, his family gathered the copies he
+  left behind, pieced them back into a single working whole, repaired what
+  had broken with time, finished a few things that were close to done, and
+  prepared it so others can read the code and run it themselves. This was
+  done with a light touch, in keeping with how he built it.
+
+  Maintained by his family at Black & Tan Labs
+  https://github.com/blackandtanlabs

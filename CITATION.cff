@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "EPUB TTS"
+abstract: >-
+  A text-to-speech audiobook reader that turns EPUB books into narrated
+  audio, using a hand-auditioned neural voice library, an invented markup
+  for assigning voices to narration and dialogue, and years of accumulated
+  rules for reading prose aloud well.
+type: software
+authors:
+  - given-names: Patrick
+    family-names: Clark
+repository-code: "https://github.com/blackandtanlabs/epub-tts"
+url: "https://github.com/blackandtanlabs/epub-tts"
+license: GPL-3.0-or-later
+version: "1.0.0"
+date-released: "2026-06-25"

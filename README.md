@@ -79,6 +79,7 @@ a light touch, in keeping with how he built it.
 - [SETUP.md](SETUP.md) — installing and pointing it at your books
 - [USAGE.md](USAGE.md) — processing a book and listening
 - [docs/TEXT-PROCESSING.md](docs/TEXT-PROCESSING.md) — pauses, pronunciation, and loudness, with best practices
+- [PROVENANCE.md](PROVENANCE.md) — what is Patrick's original work, and what was done to ready it for release
 
 ## License
 
